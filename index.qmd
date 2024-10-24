@@ -1,5 +1,5 @@
 ---
-title: <br> devExplore <br> 
+title: <br> GeckoCode <br> 
 subtitle: Unveiling the world of tech, one discovery at a time 🔭 <br> <br> <br> <br> <br> <br> 
 title-block-style: default
 title-block-banner: images/black-bg.png

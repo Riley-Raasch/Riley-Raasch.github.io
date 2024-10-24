@@ -9,7 +9,7 @@ execute:
 format:
   html:
     code-fold: false
-author: Pratik Kumar
+author: Riley Raasch
 date: '2021-03-10'
 categories:
   - Data Science
@@ -20,7 +20,7 @@ categories:
   - Kaggle
 website:
   back-to-top-navigation: true
-  page-footer: 'Copyright 2024, Pratik Kumar'
+  page-footer: 'Copyright 2024, Riley Raasch'
 toc: true
 jupyter: python3
 comments: 
@@ -440,6 +440,6 @@ sub.head()
 
 # Thank you!
 
-Author: [Pratik Kumar](https://Riley-Raasch.github.io)<br>
+Author: [Riley Raasch](https://Riley-Raasch.github.io)<br>
 References: [fastai](https://www.fast.ai), [Coursera](https://coursera.org/share/ea5cc945df9fab563eb9bc9de3089eb9)
 

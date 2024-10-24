@@ -1,5 +1,5 @@
 ---
-title: "Pratik Kumar"
+title: "Riley Raasch"
 subtitle: "*'If you want something very badly, set it free. If it comes back to you, it's yours forever. If it doesn't, it was never yours to begin with.'* <br><br> - Indecent Proposal (1993)" 
 about:
   image: "images/DP.png"

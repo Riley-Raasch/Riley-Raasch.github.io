@@ -9,7 +9,7 @@ execute:
 format:
   html:
     code-fold: false
-author: Pratik Kumar
+author: Riley Raasch
 date: '2021-03-10'
 categories:
   - Data Science
@@ -20,7 +20,7 @@ categories:
   - Kaggle
 website:
   back-to-top-navigation: true
-  page-footer: 'Copyright 2024, Pratik Kumar'
+  page-footer: 'Copyright 2024, Riley Raasch'
 toc: true
 jupyter: python3
 comments: 
@@ -474,5 +474,5 @@ summary(model, (3,28,28))
     5. https://pytorch.org/tutorials/
     6. All the images are directly rendered from there respective websites. Please visit by accessing them from markdown.
     
-- Author: Pratik Kumar
+- Author: Riley Raasch
 

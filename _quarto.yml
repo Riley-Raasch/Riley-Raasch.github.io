@@ -3,7 +3,7 @@ project:
   output-dir: _site
   
 website:
-  title: "devExplore"
+  title: "GeckoCode"
   navbar:
     logo: images/logo.png
     # logo-href: https://Riley-Raasch.github.io/

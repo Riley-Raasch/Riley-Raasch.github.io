@@ -9,7 +9,7 @@ execute:
 format:
   html:
     code-fold: false
-author: Pratik Kumar
+author: Riley Raasch
 date: '2024-09-14'
 categories:
   - NumPy
@@ -17,7 +17,7 @@ categories:
   - Data Visualization
 website:
   back-to-top-navigation: true
-  page-footer: 'Copyright 2024, Pratik Kumar'
+  page-footer: 'Copyright 2024, Riley Raasch'
 toc: true
 jupyter: python3
 comments: 
