@@ -1,7 +1,7 @@
 # Arch Installation Documentation
 
-**Notes:** 
-- Set font: `-d`
+> [!TIP]
+>  Use the bash command 'set font: `-d`' to double your font size if it is hard to see.
 
 ---
 
@@ -16,80 +16,82 @@
 ---
 
 ## 3. Partition the Disk
-   1. Open the disk partition tool:
-      ```bash
-      cfdisk /dev/sda
+   1. Open the disk partition tool
+      ```console
+      root@archiso ~ # cfdisk /dev/sda
       ```
    2. Select the `gpt` option.
+
+![image](https://github.com/user-attachments/assets/650e58dd-82eb-4a67-8be8-ef0fa7f71d0a)
+
    3. Create a 1MB partition for BIOS boot:
-      - Arrow keys to navigate.
+      - Use your down arrow keys to navigate down to free space, then select **New**.
       - Set partition size: `1M`.
       - Select partition type: **BIOS Boot**.
    4. Create a 4GB partition for Linux Swap:
-      - Move to Free Space -> **New** -> Partition Size: `4G` -> Type -> **Linux Swap**.
-   5. Create a 16GB partition for the root file system:
-      - Move to Free Space -> **New** -> Partition Size: `16G`.
-   6. Write changes and exit:
-      - Write -> **Quit**.
-
-   7. Format partitions:
+      - Use your down arrow keys to navigate down to free space, then select **New**.
+      - Set partition size: `4G`.
+      - Select partition type: **Linux Swap**.
+   7. Create a 16GB partition for the root file system:
+      - Use your down arrow keys to navigate down to free space, then select **New**.
+      - Set partition size: `16`.
+   8. Write changes and exit.
+   9. Format partitions:
       - Format root partition (ext4):
-        ```bash
-        mkfs.ext4 /dev/sda3
+        ```console
+        root@archiso ~ # mkfs.ext4 /dev/sda3
         ```
       - Set up swap partition:
-        ```bash
-        mkswap /dev/sda2
-        swapon -a
+        ```console
+        root@archiso ~ # mkswap /dev/sda2
+        root@archiso ~ # swapon -a
         ```
 
 ---
 
 ## 4. Mount the Disk
-   1. Change to the `/mnt` directory:
-      ```bash
-      cd /mnt
-      ```
-   2. Mount the root partition:
-      ```bash
-      mount /dev/sda3 /mnt
+   - Mount the root partition
+      ```console
+      root@archiso ~ # mount /dev/sda3 /mnt
       ```
 
 ---
 
 ## 5. Install the Operating System
    - Copy OS files to the mounted disk:
-     ```bash
-     pacstrap /mnt base linux linux-firmware nano grub dhcpcd
+     ```console
+     root@archiso ~ # pacstrap /mnt base linux linux-firmware nano grub dhcpcd
      ```
-
+> [!CAUTION]  
+> Do not skip this step before you reboot.
+> If you do not install dhcpcd before reboot you will not have network connectivity ever!
 ---
 
 ## 6. Configure System and Boot Loader
    1. Generate the fstab file:
-      ```bash
-      genfstab /mnt >> /mnt/etc/fstab
+      ```console
+      root@archiso ~ # genfstab /mnt >> /mnt/etc/fstab
       ```
    2. Chroot into the installed system:
-      ```bash
-      arch-chroot /mnt
+      ```console
+      root@archiso ~ # arch-chroot /mnt
       ```
    3. Set the root password:
-      ```bash
-      passwd
+      ```console
+      [root@archiso /] # passwd
       ```
    4. Install GRUB bootloader:
-      ```bash
-      grub-install /dev/sda
+      ```console
+      [root@archiso /] # grub-install /dev/sda
       ```
    5. Generate GRUB configuration file:
-      ```bash
-      grub-mkconfig -o /boot/grub/grub.cfg
+      ```console
+      [root@archiso /] # grub-mkconfig -o /boot/grub/grub.cfg
       ```
    6. Exit chroot environment and reboot:
-      ```bash
-      exit
-      reboot
+      ```console
+      [root@archiso /] # exit
+      root@archiso ~ # reboot
       ```
    7. Log in as root.
 
@@ -97,85 +99,82 @@
 
 ## 7. Network Configuration
    - Start and enable the DHCP service for network management:
-     ```bash
-     systemctl start dhcpcd
-     systemctl enable dhcpcd
+     ```console
+     [root@archiso /] # systemctl start dhcpcd
+     [root@archiso /] # systemctl enable dhcpcd
      ```
 
 ---
 
 ## 8. Package Manager Configuration
    1. Edit the Pacman configuration:
-      ```bash
-      nano /etc/pacman.conf
+      ```console
+      [root@archiso /] # nano /etc/pacman.conf
       ```
       - Scroll down and uncomment the following lines to enable multilib:
+        ```
+        #[multilib]
+        #Include = /etc/pacman.d/mirrorlist
+        ```
         ```
         [multilib]
         Include = /etc/pacman.d/mirrorlist
         ```
    2. Update package lists:
-      ```bash
-      pacman -Syy
+      ```console
+      [root@archiso /] # pacman -Syy
       ```
 
 ---
 
 ## 9. SSH Configuration
    1. Install OpenSSH:
-      ```bash
-      pacman -S openssh
+      ```console
+      [root@archiso /] # pacman -S openssh
       ```
    2. Start and enable the SSH service:
-      ```bash
-      systemctl start sshd
-      systemctl enable sshd
+      ```console
+      [root@archiso /] # systemctl start sshd
+      [root@archiso /] # systemctl enable sshd
       ```
 
 ---
 
-## 10. Timezone Setup
-   - Set up the appropriate timezone (command not provided but typically `timedatectl set-timezone <Region/City>`).
-
----
-
-## 11. Sudo Setup
+## 10. Sudo Setup
    1. Install `sudo`:
-      ```bash
-      pacman -S sudo
+      ```console
+      [root@archiso /] # pacman -S sudo
       ```
    2. Edit the sudoers file:
-      ```bash
-      EDITOR=nano visudo
+      ```console
+      [root@archiso /] # EDITOR=nano visudo
       ```
-      - Uncomment the line:
+      - Uncomment this line so that users in group wheel have sudo permissions:
         ```
+        ##Uncomment to allow members of group wheel to execute any command
+        #%wheel ALL=(ALL) ALL
+        ```
+        ```
+        ##Uncomment to allow members of group wheel to execute any command
         %wheel ALL=(ALL) ALL
         ```
-   3. Add a new sudo user:
-      ```bash
-      sudo useradd -m -s /bin/zsh justin
+   3. Add yourself as a sudo user:
+      ```console
+      [root@archiso /] # sudo useradd -m riley
+      [root@archiso /] # sudo usermod -aG wheel riley
       ```
-      - Set the password for the user:
-        ```bash
-        echo "justin:GraceHopper1906" | sudo chpasswd
-        ```
-      - Force the user to change the password on the next login:
-        ```bash
-        sudo chage -d 0 justin
-        ```
 
 ---
 
 ## 12. NetworkManager Setup
    1. Install NetworkManager:
-      ```bash
-      sudo pacman -S networkmanager
+      ```console
+      [root@archiso /] # sudo pacman -S networkmanager
       ```
    2. Start and enable NetworkManager:
-      ```bash
-      systemctl start NetworkManager
-      systemctl enable NetworkManager
+      ```console
+      [root@archiso /] # systemctl start NetworkManager
+      [root@archiso /] # systemctl enable NetworkManager
       ```
 
 ---
@@ -183,31 +182,32 @@
 ## 13. KDE Plasma Desktop Installation
    1. Log in to your user account.
    2. Install KDE Plasma and SDDM display manager:
-      ```bash
-      sudo pacman -S plasma sddm
+      ```console
+      [riley@ArchLinux ~]$ sudo pacman -S plasma sddm
       ```
    3. Install additional software:
-      ```bash
-      sudo pacman -S konsole kate firefox zsh git
+      ```console
+      [riley@ArchLinux ~]$ sudo pacman -S konsole kate firefox zsh git
       ```
    4. Set ZSH as the default shell:
-      ```bash
-      chsh -s $(which zsh)
+      ```console
+      [riley@ArchLinux ~]$ chsh -s $(which zsh)
       ```
    5. Enable SDDM for graphical login:
-      ```bash
-      sudo systemctl enable sddm
-      sudo systemctl enable --now sddm
+      ```console
+      [riley@ArchLinux ~]$ sudo systemctl enable sddm
+      [riley@ArchLinux ~]$ sudo systemctl enable --now sddm
       ```
 
 ---
 
 ## 14. ZSH Setup
-   1. Install Oh My Zsh:
+   1. Login as yourself, Open Konsole (you may get an error, since we haven't configured ZSH yet)
+   2. Install Oh My Zsh:
       ```bash
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       ```
-   2. Edit the Zsh configuration file:
+   3. Edit the Zsh configuration file:
       ```bash
       nano ~/.zshrc
       ```
@@ -215,11 +215,42 @@
         ```
         ZSH_THEME="bira"
         ```
+        Exit and save.
+      - Restart ZSH:
+        ```
+        source ~/.zshrc
+        ```
+
+> [!TIP]
+> Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with the terminal colors.
+
+---
+## 15. Add other users
+   1. ```bash
+      sudo useradd -m -s /bin/zsh justin
+      ```
+   2. Set the password for the user:
+        ```bash
+        echo "justin:GraceHopper1906" | sudo chpasswd
+        ```
+   3. Force the user to change the password on the next login:
+        ```bash
+        sudo chage -d 0 justin
+        ```
+   4. Set sudo permissions:
+       ```bash
+        sudo usermod -aG wheel justin
+        ```
+   5. Repeat for Codi
 
 ---
 
-## 15. Aliases Used
-   - Define helpful command aliases in `.zshrc`:
+## 16. Aliases Used
+   - Define helpful command aliases in `.zshrc` with the command:
+     ```bash
+     sudo nano ~/.zshrc
+     ```
+   - Set your aliases
      ```bash
      alias c='clear'
      alias get='sudo pacman -S'
@@ -228,3 +259,38 @@
      ```
 
 ---
+
+## 17. Customization
+   1. Hostname 
+      ```console
+      sudo nano /etc/hostname
+      ```
+      Type your preferred name (I chose Pacman), then exit and save.
+   3. Wallpaper
+         - Go to System Settings, then Quick Settings, Wallpaper, + Add, navigate to your image, Open, Apply
+   4. Theme
+         - Go to System Settings, then Quick Settings, click Breeze (dark mode), Apply
+   4. Lock Screen
+         - Go to System Settings, then Colors & Themes, Login Screen (SDDM), select Breeze, Click the picture icon, Load From File..., navigate to your image, Open, Apply Plasma Settings (top toolbar), Apply (bottom right), restart
+   
+> [!CAUTION]  
+> CLICK BOTH Apply Plasma Settings (top toolbar) and Apply (bottom right).
+> KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings (top toolbar), you will load into a black screen and will not be able to recover your GUI.
+
+   5. Timezone
+         - Date & Time, set date and time automatically, Time Zone (top Right), search for your region (CHicago in my case), click it, Apply
+         - Click on the time (Bottom Right of your Desktop), Click Digital Clock Settings (Top right of time window), click the drop down to select 12-Hour time, Apply
+      
+---
+
+## 18. Other Packages I like
+   1. tree
+   2. neofetch
+   3. cowsay
+
+---
+      
+## Sources
+1. [Straightforward Configuration](https://www.youtube.com/watch?v=l8YPS2itHfU)
+2. [KDE Plasma Guidance](https://www.youtube.com/watch?v=68z11VAYMS8&t)
+3. [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide)

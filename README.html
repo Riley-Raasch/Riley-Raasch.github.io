@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="arch-installation-documentation">Arch Installation Documentation</h1>
+<blockquote>
+<p>[!TIP]
+Use the bash command 'set font: <code>-d</code>' to double your font size if it is hard to see.</p>
+</blockquote>
+<hr>
+<h2 id="1-install-an-iso-from-arch-linux">1. Install an ISO from <a href="https://archlinux.org/download/">Arch Linux</a></h2>
+<ul>
+<li>I chose one from MIT: <a href="https://mirrors.mit.edu/archlinux/iso/2024.10.01/">MIT Arch Linux ISO (2024.10.01)</a></li>
+</ul>
+<hr>
+<h2 id="2-create-a-new-virtual-machine">2. Create a New Virtual Machine</h2>
+<ul>
+<li>Set disk size to <strong>20GB</strong> and <strong>2GB of RAM</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-partition-the-disk">3. Partition the Disk</h2>
+<ol>
+<li>Open the disk partition tool<pre class="hljs"><code><div>root@archiso ~ # cfdisk /dev/sda
+</div></code></pre>
+</li>
+<li>Select the <code>gpt</code> option.</li>
+</ol>
+<p><img src="https://github.com/user-attachments/assets/650e58dd-82eb-4a67-8be8-ef0fa7f71d0a" alt="image"></p>
+<ol start="3">
+<li>Create a 1MB partition for BIOS boot:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>1M</code>.</li>
+<li>Select partition type: <strong>BIOS Boot</strong>.</li>
+</ul>
+</li>
+<li>Create a 4GB partition for Linux Swap:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>4G</code>.</li>
+<li>Select partition type: <strong>Linux Swap</strong>.</li>
+</ul>
+</li>
+<li>Create a 16GB partition for the root file system:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>16</code>.</li>
+</ul>
+</li>
+<li>Write changes and exit.</li>
+<li>Format partitions:
+<ul>
+<li>Format root partition (ext4):<pre class="hljs"><code><div>root@archiso ~ # mkfs.ext4 /dev/sda3
+</div></code></pre>
+</li>
+<li>Set up swap partition:<pre class="hljs"><code><div>root@archiso ~ # mkswap /dev/sda2
+root@archiso ~ # swapon -a
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="4-mount-the-disk">4. Mount the Disk</h2>
+<ul>
+<li>Mount the root partition<pre class="hljs"><code><div>root@archiso ~ # mount /dev/sda3 /mnt
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="5-install-the-operating-system">5. Install the Operating System</h2>
+<ul>
+<li>Copy OS files to the mounted disk:<pre class="hljs"><code><div>root@archiso ~ # pacstrap /mnt base linux linux-firmware nano grub dhcpcd
+</div></code></pre>
+</li>
+</ul>
+<blockquote>
+<p>[!CAUTION]<br>
+Do not skip this step before you reboot.
+If you do not install dhcpcd before reboot you will not have network connectivity ever!</p>
+</blockquote>
+<hr>
+<h2 id="6-configure-system-and-boot-loader">6. Configure System and Boot Loader</h2>
+<ol>
+<li>Generate the fstab file:<pre class="hljs"><code><div>root@archiso ~ # genfstab /mnt &gt;&gt; /mnt/etc/fstab
+</div></code></pre>
+</li>
+<li>Chroot into the installed system:<pre class="hljs"><code><div>root@archiso ~ # arch-chroot /mnt
+</div></code></pre>
+</li>
+<li>Set the root password:<pre class="hljs"><code><div>[root@archiso /] # passwd
+</div></code></pre>
+</li>
+<li>Install GRUB bootloader:<pre class="hljs"><code><div>[root@archiso /] # grub-install /dev/sda
+</div></code></pre>
+</li>
+<li>Generate GRUB configuration file:<pre class="hljs"><code><div>[root@archiso /] # grub-mkconfig -o /boot/grub/grub.cfg
+</div></code></pre>
+</li>
+<li>Exit chroot environment and reboot:<pre class="hljs"><code><div>[root@archiso /] # exit
+root@archiso ~ # reboot
+</div></code></pre>
+</li>
+<li>Log in as root.</li>
+</ol>
+<hr>
+<h2 id="7-network-configuration">7. Network Configuration</h2>
+<ul>
+<li>Start and enable the DHCP service for network management:<pre class="hljs"><code><div>[root@archiso /] # systemctl start dhcpcd
+[root@archiso /] # systemctl enable dhcpcd
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="8-package-manager-configuration">8. Package Manager Configuration</h2>
+<ol>
+<li>Edit the Pacman configuration:<pre class="hljs"><code><div>[root@archiso /] # nano /etc/pacman.conf
+</div></code></pre>
+<ul>
+<li>Scroll down and uncomment the following lines to enable multilib:<pre class="hljs"><code><div>#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+</div></code></pre>
+<pre class="hljs"><code><div>[multilib]
+Include = /etc/pacman.d/mirrorlist
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>Update package lists:<pre class="hljs"><code><div>[root@archiso /] # pacman -Syy
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="9-ssh-configuration">9. SSH Configuration</h2>
+<ol>
+<li>Install OpenSSH:<pre class="hljs"><code><div>[root@archiso /] # pacman -S openssh
+</div></code></pre>
+</li>
+<li>Start and enable the SSH service:<pre class="hljs"><code><div>[root@archiso /] # systemctl start sshd
+[root@archiso /] # systemctl enable sshd
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="10-sudo-setup">10. Sudo Setup</h2>
+<ol>
+<li>Install <code>sudo</code>:<pre class="hljs"><code><div>[root@archiso /] # pacman -S sudo
+</div></code></pre>
+</li>
+<li>Edit the sudoers file:<pre class="hljs"><code><div>[root@archiso /] # EDITOR=nano visudo
+</div></code></pre>
+<ul>
+<li>Uncomment this line so that users in group wheel have sudo permissions:<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
+#%wheel ALL=(ALL) ALL
+</div></code></pre>
+<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL) ALL
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>Add yourself as a sudo user:<pre class="hljs"><code><div>[root@archiso /] # sudo useradd -m riley
+[root@archiso /] # sudo usermod -aG wheel riley
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="12-networkmanager-setup">12. NetworkManager Setup</h2>
+<ol>
+<li>Install NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # sudo pacman -S networkmanager
+</div></code></pre>
+</li>
+<li>Start and enable NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # systemctl start NetworkManager
+[root@archiso /] # systemctl enable NetworkManager
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="13-kde-plasma-desktop-installation">13. KDE Plasma Desktop Installation</h2>
+<ol>
+<li>Log in to your user account.</li>
+<li>Install KDE Plasma and SDDM display manager:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S plasma sddm
+</div></code></pre>
+</li>
+<li>Install additional software:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S konsole kate firefox zsh git
+</div></code></pre>
+</li>
+<li>Set ZSH as the default shell:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ chsh -s $(which zsh)
+</div></code></pre>
+</li>
+<li>Enable SDDM for graphical login:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo systemctl enable sddm
+[riley@ArchLinux ~]$ sudo systemctl enable --now sddm
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="14-zsh-setup">14. ZSH Setup</h2>
+<ol>
+<li>Login as yourself, Open Konsole (you may get an error, since we haven't configured ZSH yet)</li>
+<li>Install Oh My Zsh:<pre class="hljs"><code><div>sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span>
+</div></code></pre>
+</li>
+<li>Edit the Zsh configuration file:<pre class="hljs"><code><div>nano ~/.zshrc
+</div></code></pre>
+<ul>
+<li>Set the theme to <code>bira</code>:<pre class="hljs"><code><div>ZSH_THEME=&quot;bira&quot;
+</div></code></pre>
+Exit and save.</li>
+<li>Restart ZSH:<pre class="hljs"><code><div>source ~/.zshrc
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!TIP]
+Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with the terminal colors.</p>
+</blockquote>
+<hr>
+<h2 id="15-add-other-users">15. Add other users</h2>
+<ol>
+<li>
+<pre class="hljs"><code><div>sudo useradd -m -s /bin/zsh justin
+</div></code></pre>
+</li>
+<li>Set the password for the user:<pre class="hljs"><code><div><span class="hljs-built_in">echo</span> <span class="hljs-string">"justin:GraceHopper1906"</span> | sudo chpasswd
+</div></code></pre>
+</li>
+<li>Force the user to change the password on the next login:<pre class="hljs"><code><div>sudo chage -d 0 justin
+</div></code></pre>
+</li>
+<li>Set sudo permissions:<pre class="hljs"><code><div> sudo usermod -aG wheel justin
+</div></code></pre>
+</li>
+<li>Repeat for Codi</li>
+</ol>
+<hr>
+<h2 id="16-aliases-used">16. Aliases Used</h2>
+<ul>
+<li>Define helpful command aliases in <code>.zshrc</code> with the command:<pre class="hljs"><code><div>sudo nano ~/.zshrc
+</div></code></pre>
+</li>
+<li>Set your aliases<pre class="hljs"><code><div><span class="hljs-built_in">alias</span> c=<span class="hljs-string">'clear'</span>
+<span class="hljs-built_in">alias</span> get=<span class="hljs-string">'sudo pacman -S'</span>
+<span class="hljs-built_in">alias</span> <span class="hljs-built_in">cd</span>..=<span class="hljs-string">'cd ..'</span>
+<span class="hljs-built_in">alias</span> update=<span class="hljs-string">'sudo pacman -Syu'</span>
+</div></code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="17-customization">17. Customization</h2>
+<ol>
+<li>Hostname<pre class="hljs"><code><div>sudo nano /etc/hostname
+</div></code></pre>
+Type your preferred name (I chose Pacman), then exit and save.</li>
+<li>Wallpaper
+<ul>
+<li>Go to System Settings, then Quick Settings, Wallpaper, + Add, navigate to your image, Open, Apply</li>
+</ul>
+</li>
+<li>Theme
+<ul>
+<li>Go to System Settings, then Quick Settings, click Breeze (dark mode), Apply</li>
+</ul>
+</li>
+<li>Lock Screen
+<ul>
+<li>Go to System Settings, then Colors &amp; Themes, Login Screen (SDDM), select Breeze, Click the picture icon, Load From File..., navigate to your image, Open, Apply Plasma Settings (top toolbar), Apply (bottom right), restart</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!CAUTION]<br>
+CLICK BOTH Apply Plasma Settings (top toolbar) and Apply (bottom right).
+KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings (top toolbar), you will load into a black screen and will not be able to recover your GUI.</p>
+</blockquote>
+<ol start="5">
+<li>Timezone
+<ul>
+<li>Date &amp; Time, set date and time automatically, Time Zone (top Right), search for your region (CHicago in my case), click it, Apply</li>
+<li>Click on the time (Bottom Right of your Desktop), Click Digital Clock Settings (Top right of time window), click the drop down to select 12-Hour time, Apply</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="18-other-packages-i-like">18. Other Packages I like</h2>
+<ol>
+<li>tree</li>
+<li>neofetch</li>
+<li>cowsay</li>
+</ol>
+<hr>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=l8YPS2itHfU">Straightforward Configuration</a></li>
+<li><a href="https://www.youtube.com/watch?v=68z11VAYMS8&amp;t">KDE Plasma Guidance</a></li>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide">Arch Wiki</a></li>
+</ol>
+
+</body>
+</html>
