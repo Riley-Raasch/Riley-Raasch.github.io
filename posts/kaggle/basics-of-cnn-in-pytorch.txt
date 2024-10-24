@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: Riley-Raasch/Riley-Raasch.github.io
 ---
 
 Convolutional Neural Networks, do we really understand what goes under the hood? Imagining what actually goes within a deep learning architecture can be tough. That's okay it's normal! As neural networks are still called the *black box*, even though we have moved ahead so much towards powerful-complex models. This notebook is an attempt to understand a very common yet powerful deep learning model of working with image classification, detection, etc., known as **Convolution Neural Network**.
@@ -99,7 +99,7 @@ Now let's develop a model that would learn the information of image and would cl
 ![](https://miro.medium.com/max/2560/1*ciDgQEjViWLnCbmX-EeSrA.gif)
 
 ## So, what is a Convoution Neural Network?
-> In 1990s Yann LeCun introduced a powerful model that would classifiy handwritten digits with high accuracy(at that time). This popular model is known as LeNet. It had few operations different from the traditional [multi-layered perceptron](https://www.kaggle.com/pr2tik1/multi-layered-perceptron-pytorch). The LeNet model had a **convolution** operation and hence the name "Convolution Neural Networks".
+> In 1990s Yann LeCun introduced a powerful model that would classifiy handwritten digits with high accuracy(at that time). This popular model is known as LeNet. It had few operations different from the traditional [multi-layered perceptron](https://www.kaggle.com/Riley-Raasch/multi-layered-perceptron-pytorch). The LeNet model had a **convolution** operation and hence the name "Convolution Neural Networks".
 
 This technique proved to be effective after addition of two more factors:
 
@@ -460,9 +460,9 @@ summary(model, (3,28,28))
 - What next?
     - This notebook only introduces the model development part. I will be posting next notebook on training the network. Until then you may check and upvote if you like: 
     
-        1. [PyTorch Logistic Regression](https://www.kaggle.com/pr2tik1/logistic-regression-in-pytorch-from-scratch)
-        2. [PyTorch MLP](https://www.kaggle.com/pr2tik1/multi-layered-perceptron-pytorch)
-        3. [Other Data Science Notebooks](https://www.kaggle.com/pr2tik1/code)
+        1. [PyTorch Logistic Regression](https://www.kaggle.com/Riley-Raasch/logistic-regression-in-pytorch-from-scratch)
+        2. [PyTorch MLP](https://www.kaggle.com/Riley-Raasch/multi-layered-perceptron-pytorch)
+        3. [Other Data Science Notebooks](https://www.kaggle.com/Riley-Raasch/code)
 
 
 - References:

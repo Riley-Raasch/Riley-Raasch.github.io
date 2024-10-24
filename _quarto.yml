@@ -6,16 +6,16 @@ website:
   title: "devExplore"
   navbar:
     logo: images/logo.png
-    # logo-href: https://pr2tik1.github.io/
+    # logo-href: https://Riley-Raasch.github.io/
     right:
       - icon: twitter
         href: https://twitter.com/Pratikpkb
       - icon: linkedin
         href: https://www.linkedin.com/in/pratik-kumar04/
       - icon: github
-        href: https://github.com/pr2tik1
+        href: https://github.com/Riley-Raasch
       - icon: medium
-        href: https://medium.com/@pr2tik1
+        href: https://medium.com/@Riley-Raasch
     left: 
       - href: index.qmd
         text: Home

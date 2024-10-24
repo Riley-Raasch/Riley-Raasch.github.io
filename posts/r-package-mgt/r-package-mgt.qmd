@@ -20,7 +20,7 @@ website:
 toc: true
 comments:
   utterances:
-    repo: pr2tik1/pr2tik1.github.io
+    repo: Riley-Raasch/Riley-Raasch.github.io
 jupyter: python3
 ---
 

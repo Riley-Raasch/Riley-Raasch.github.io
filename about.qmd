@@ -12,9 +12,9 @@ about:
     - icon: linkedin
       href: https://www.linkedin.com/in/pratik-kumar04/
     - icon: github
-      href: https://github.com/pr2tik1
+      href: https://github.com/Riley-Raasch
     - icon: medium
-      href: https://medium.com/@pr2tik1
+      href: https://medium.com/@Riley-Raasch
     - icon: instagram
       href: https://instagram.com/pratikkumar04
     - icon: file-earmark-person-fill

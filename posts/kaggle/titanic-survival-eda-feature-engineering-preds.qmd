@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: Riley-Raasch/Riley-Raasch.github.io
 ---
 
 ## Introduction
@@ -658,6 +658,6 @@ submission.head()
 
 # Thankyou!
 
-- Kaggle: [Notebook](https://www.kaggle.com/code/pr2tik1/titanic-survival-eda-feature-engineering-preds)
+- Kaggle: [Notebook](https://www.kaggle.com/code/Riley-Raasch/titanic-survival-eda-feature-engineering-preds)
 - Resources: [Udemy Course](https://www.udemy.com/share/1020r6AkcfcV5TQXo=/), Scikit-Learn docs
 

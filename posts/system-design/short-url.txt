@@ -23,7 +23,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: Riley-Raasch/Riley-Raasch.github.io
 ---
 
 ## A. Introduction
@@ -118,7 +118,7 @@ The frontend is where users interact with the URL shortener. It's the part of th
 
 **Tech Stack Consideration**: For the frontend, using modern frameworks like **React** or **Vue.js** allows for a fast, responsive interface. These frameworks also make it easier to scale and add new features as the project evolves. We can also utilise **Tailwind.css** or **shadcn-ui** to give a minimalistic look.
 
-![Fronted of the URL Shortener App (https://github.com/pr2tik1/url-shortner-service)](images/paste-6.png){fig-align="center" width="686"}
+![Fronted of the URL Shortener App (https://github.com/Riley-Raasch/url-shortner-service)](images/paste-6.png){fig-align="center" width="686"}
 
 ### C.2. **Server (Backend/API)**
 
