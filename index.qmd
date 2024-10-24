@@ -1,8 +1,8 @@
 ---
 title: <br> GeckoSec <br> 
-subtitle: Unveiling the world of tech, one discovery at a time 🔭 <br> <br> <br> <br> <br> <br> 
+subtitle: Cats may have nine lives, but your data only has one. Protect it! 😺<br> <br> <br> <br> <br> <br> 
 title-block-style: default
-title-block-banner: images/black-bg.png
+title-block-banner: images/Sazerac_Header.png
 title-block-banner-color: white
 page-layout: full
 listing:

@@ -338,19 +338,19 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
             footer({ _items, createElement }) {
               if (
                 quartoSearchOptions.algolia &&
-                quartoSearchOptions.algolia["show-logo"]
+                quartoSearchOptions.algolia["show-cute_gecko"]
               ) {
                 const libDir = quartoSearchOptions.algolia["libDir"];
-                const logo = createElement("img", {
+                const cute_gecko = createElement("img", {
                   src: offsetURL(
                     `${libDir}/quarto-search/search-by-algolia.svg`
                   ),
-                  class: "algolia-search-logo",
+                  class: "algolia-search-cute_gecko",
                 });
                 return createElement(
                   "a",
                   { href: "http://www.algolia.com/" },
-                  logo
+                  cute_gecko
                 );
               }
             },

@@ -5,8 +5,8 @@ project:
 website:
   title: "GeckoSec"
   navbar:
-    logo: images/logo.png
-    # logo-href: https://Riley-Raasch.github.io/
+    cute_gecko: images/cute_gecko.png
+    # cute_gecko-href: https://Riley-Raasch.github.io/
     right:
       - icon: twitter
         href: https://twitter.com/Pratikpkb
@@ -27,7 +27,7 @@ website:
         href: license.qmd
       - text: "Trademark"
         href: trademark.qmd
-  favicon: images/logo.png
+  favicon: images/cute_gecko.png
   twitter-card: true
   comments: false
   # google-analytics:
