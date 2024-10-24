@@ -3,7 +3,7 @@ project:
   output-dir: _site
   
 website:
-  title: "GeckoCode"
+  title: "GeckoSec"
   navbar:
     logo: images/logo.png
     # logo-href: https://Riley-Raasch.github.io/
@@ -11,7 +11,7 @@ website:
       - icon: twitter
         href: https://twitter.com/Pratikpkb
       - icon: linkedin
-        href: https://www.linkedin.com/in/pratik-kumar04/
+        href: https://www.linkedin.com/in/riley-raasch-b79178220/
       - icon: github
         href: https://github.com/Riley-Raasch
     left: 

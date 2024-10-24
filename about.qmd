@@ -10,13 +10,13 @@ about:
     - icon: twitter
       href: https://twitter.com/Pratikpkb
     - icon: linkedin
-      href: https://www.linkedin.com/in/pratik-kumar04/
+      href: https://www.linkedin.com/in/riley-raasch-b79178220/
     - icon: github
       href: https://github.com/Riley-Raasch
     - icon: medium
       href: https://medium.com/@Riley-Raasch
     - icon: instagram
-      href: https://instagram.com/pratikkumar04
+      href: https://instagram.com/riley_raasch
     - icon: file-earmark-person-fill
       text: Resume
       href: https://drive.google.com/file/d/1bO2scT5bjixISLEEfXicsK6k-TkwPAHC/view?usp=sharing
