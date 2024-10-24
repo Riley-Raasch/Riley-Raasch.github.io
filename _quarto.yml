@@ -22,10 +22,6 @@ website:
     center: 
       - text: "About"
         href: about.qmd
-      - text: "License"
-        href: license.qmd
-      - text: "Trademark"
-        href: trademark.qmd
   favicon: images/cute_gecko.png
   twitter-card: true
   comments: false
