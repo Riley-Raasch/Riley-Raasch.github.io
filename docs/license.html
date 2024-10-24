@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>  devExplore   – devExplore</title>
+<title>license – devExplore</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,94 +67,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: white;
-      }
-
-      .quarto-title-block .quarto-title-banner {
-        color: white;
-background-image: url(images/black-bg.png);
-background-size: cover;
-      }
-</style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content=" devExplore  – devExplore">
-<meta name="twitter:description" content="Unveiling the world of tech, one discovery at a time 🔭      ">
+<meta name="twitter:title" content="devExplore">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -174,7 +95,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -211,31 +132,12 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title"><br> devExplore <br></h1>
-            <p class="subtitle lead">Unveiling the world of tech, one discovery at a time 🔭 <br> <br> <br> <br> <br> <br></p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Coding Practices">Coding Practices <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Science">Data Science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Visualization">Data Visualization <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Dockers">Dockers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Feature Engineering">Feature Engineering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Kaggle">Kaggle <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Plotly">Plotly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="REST API">REST API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="System Design">System Design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Web Application">Web Application <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
@@ -243,316 +145,7 @@ window.Quarto = {
 
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="System Design,Python,REST API,Web Application" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-<div class="thumbnail">
-<p><a href="./posts/system-design/short-url.html" class="no-external"></a></p><a href="./posts/system-design/short-url.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/4.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/system-design/short-url.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/system-design/short-url.html" class="no-external">Building a URL shortner</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/system-design/short-url.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('System Design'); return false;">
-System Design
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('REST API'); return false;">
-REST API
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Web Application'); return false;">
-Web Application
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/system-design/short-url.html" class="no-external">Designing a URL shortener, like TinyURL, is a classic problem in system design that offers a great opportunity to explore key design concepts. It’s not just about shrinking…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/system-design/short-url.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2024
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-14 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="R,Coding Practices" data-listing-date-sort="1705622400000" data-listing-file-modified-sort="1725902876431" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="904">
-<div class="thumbnail">
-<p><a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external"></a></p><a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/2.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external">Simplifying R Package Management - renv vs packrat</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Coding Practices'); return false;">
-Coding Practices
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external">In this blog post, we’ll explore two popular tools for R package management – renv and packrat. We’ll delve into their features, advantages, and provide practical examples…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/r-package-mgt/r-package-mgt.html" class="no-external">
-<div class="listing-date">
-Jan 19, 2024
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-5 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-categories="Dockers,Python,R,Coding Practices" data-listing-date-sort="1690761600000" data-listing-file-modified-sort="1725902884855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1022">
-<div class="thumbnail">
-<p><a href="./posts/remote-extension/remote-containers.html" class="no-external"></a></p><a href="./posts/remote-extension/remote-containers.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/3.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/remote-extension/remote-containers.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/remote-extension/remote-containers.html" class="no-external">Efficient project management using Dockers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/remote-extension/remote-containers.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Dockers'); return false;">
-Dockers
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Coding Practices'); return false;">
-Coding Practices
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/remote-extension/remote-containers.html" class="no-external">Dockers are excellent tools in software development. The key benefit of Dockers is that they allow users to package an application with all its dependencies into a…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/remote-extension/remote-containers.html" class="no-external">
-<div class="listing-date">
-Jul 31, 2023
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-6 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="3" data-categories="Data Visualization,Plotly,Python,Coding Practices" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1725903763015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1370">
-<div class="thumbnail">
-<p><a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external"></a></p><a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/1.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external">Hierarchical Data Visualization Demystified</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Visualization'); return false;">
-Data Visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Plotly'); return false;">
-Plotly
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Coding Practices'); return false;">
-Coding Practices
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external">Data visualization plays a vital role in various domains such as data analytics, data science, data dashboarding, and exploratory/statistical analysis. Within the Python and…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hierarchical/Plotly-Sunburst.html" class="no-external">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-7 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="4" data-categories="Data Science,Data Visualization,Python,Machine Learning,Feature Engineering,Kaggle" data-listing-date-sort="1619308800000" data-listing-file-modified-sort="1725912736221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1552">
-<div class="thumbnail">
-<p><a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external"></a></p><a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/11.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external">Loan Status Prediction</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
-Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Visualization'); return false;">
-Data Visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Feature Engineering'); return false;">
-Feature Engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Kaggle'); return false;">
-Kaggle
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external">The goal of this project is to develop an automated system for predicting loan eligibility based on customer details provided through an online application form. The company…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/kaggle/loan-status-eda-classification.html" class="no-external">
-<div class="listing-date">
-Apr 25, 2021
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-8 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="5" data-categories="Data Science,Data Visualization,Python,Machine Learning,Feature Engineering,Kaggle" data-listing-date-sort="1616284800000" data-listing-file-modified-sort="1725912736221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2984">
-<div class="thumbnail">
-<p><a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external"></a></p><a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/10.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external">Titanic Survival Prediction</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
-Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Visualization'); return false;">
-Data Visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Feature Engineering'); return false;">
-Feature Engineering
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Kaggle'); return false;">
-Kaggle
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external">Welcome to the Titanic Survival Prediction project, a classic challenge that serves as the perfect starting point for anyone looking to dive into the world of Machine…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/kaggle/titanic-survival-eda-feature-engineering-preds.html" class="no-external">
-<div class="listing-date">
-Mar 21, 2021
-</div>
-<div class="listing-author">
-Pratik Kumar
-</div>
-<div class="listing-reading-time">
-15 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -645,7 +238,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/pr2tik1\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -987,7 +580,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./license.html">
+    <a class="nav-link active" href="./license.html" aria-current="page">
 <p>License</p>
 </a>
   </li>  
