@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: pr2tik1/Riley-Raasch.github.io
 ---
 
 
@@ -440,6 +440,6 @@ sub.head()
 
 # Thank you!
 
-Author: [Pratik Kumar](https://pr2tik1.github.io)<br>
+Author: [Pratik Kumar](https://Riley-Raasch.github.io)<br>
 References: [fastai](https://www.fast.ai), [Coursera](https://coursera.org/share/ea5cc945df9fab563eb9bc9de3089eb9)
 

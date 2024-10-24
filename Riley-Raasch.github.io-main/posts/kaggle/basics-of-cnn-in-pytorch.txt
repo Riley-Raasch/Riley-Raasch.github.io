@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: pr2tik1/Riley-Raasch.github.io
 ---
 
 Convolutional Neural Networks, do we really understand what goes under the hood? Imagining what actually goes within a deep learning architecture can be tough. That's okay it's normal! As neural networks are still called the *black box*, even though we have moved ahead so much towards powerful-complex models. This notebook is an attempt to understand a very common yet powerful deep learning model of working with image classification, detection, etc., known as **Convolution Neural Network**.

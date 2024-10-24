@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: pr2tik1/Riley-Raasch.github.io
 ---
 
 In this competition, our goal is to correctly identify digits from a dataset of tens of thousands of handwritten images using custom multi-layered perceptron.

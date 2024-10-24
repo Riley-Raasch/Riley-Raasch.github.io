@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: pr2tik1/Riley-Raasch.github.io
 ---
 
 The goal of this project is to develop an automated system for predicting loan eligibility based on customer details provided through an online application form. The company aims to streamline and optimize their loan approval process by leveraging data to identify customer segments that are most likely to be eligible for a loan. This will enable targeted marketing and more efficient processing of applications.
@@ -506,5 +506,5 @@ submission.to_csv("results.csv", encoding='utf-8', index=False)
 
 # Thank you
 
-Author: [Pratik Kumar](https://pr2tik1.github.io)
+Author: [Pratik Kumar](https://Riley-Raasch.github.io)
 

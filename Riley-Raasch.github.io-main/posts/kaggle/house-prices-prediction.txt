@@ -25,7 +25,7 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/pr2tik1.github.io
+        repo: pr2tik1/Riley-Raasch.github.io
 ---
 
 With the goal of predicting house prices this notebook uses sklearn, scipy and visualisation libraries such as matplotlib and plotly. I have used regression models and XG Boost to predict the prices. 
@@ -525,5 +525,5 @@ print(submission.head())
 
 # Thankyou!
 
-Author : [Pratik Kumar](https://pr2tik1.github.io)
+Author : [Pratik Kumar](https://Riley-Raasch.github.io)
 
