@@ -2,43 +2,32 @@
 title: "Riley Raasch"
 subtitle: "*'If you want something very badly, set it free. If it comes back to you, it's yours forever. If it doesn't, it was never yours to begin with.'* <br><br> - Indecent Proposal (1993)" 
 about:
-  image: "images/DP.png"
+  image: "images/riley.png"
   image-width: 15em
   image-shape: rounded
   template: trestles
   links:
-    - icon: twitter
-      href: https://twitter.com/Pratikpkb
     - icon: linkedin
       href: https://www.linkedin.com/in/riley-raasch-b79178220/
     - icon: github
       href: https://github.com/Riley-Raasch
-    - icon: medium
-      href: https://medium.com/@Riley-Raasch
     - icon: instagram
       href: https://instagram.com/riley_raasch
-    - icon: file-earmark-person-fill
-      text: Resume
-      href: https://drive.google.com/file/d/1bO2scT5bjixISLEEfXicsK6k-TkwPAHC/view?usp=sharing
     
 ---
 
-Hello! 👋 I am a software engineer who loves working on websites, AI, and data-related projects. When I'm not coding, I enjoy going on treks, exploring new cuisines, and playing sports like football, badminton, cricket, and table tennis. I love photography and watching exciting movies like "Edge of Tomorrow". And I am always up for a coffee !
-
-Currently, I am working at [**Elucidata**](https://www.elucidata.io/), solving some of the complex problems in drug discovery. 
-
-View my **resume** [here](https://drive.google.com/file/d/1bO2scT5bjixISLEEfXicsK6k-TkwPAHC/view?usp=sharing).
+Hello! 👋 I am currently studying Computer Science at the University of Tulsa and will graduate May 2025. 
+Currently, I am working at the Bank of Oklahoma as an information security intern. 
+Outside of school and work, you'll most likely find me spending time with family or friends, watching a supernatural drama TV show, reading up on random X-Men facts, or spoiling my cat.
 
 ## 👨🏻‍💻 Work Experience
 ---
 
-**Elucidata** | Aug 2021 - Present <br>
-  - Software Engineer (current) <br>
-  - Data Analyst
+**BOK Financial** | May 2024 - Present <br>
+  - Information Security Intern (current) 
   
-**Elucidata** | May 2021 - Aug 2021 <br>
-  - Data Science Intern
+**University of Tulsa** | Aug 2021 - May 2024 <br>
+  - Undergraduate Research <br>
+  - Webpae Support (work study)
 
-**Bayer Cropscience** | May 2019 - June 2019 <br>
-  - Data Science Intern
 
