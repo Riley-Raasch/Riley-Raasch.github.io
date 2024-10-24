@@ -192,24 +192,28 @@ background: black;
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#1.-install-iso" id="toc-1.-install-iso" class="nav-link active" data-scroll-target="#1.-install-iso">1. Install an ISO from Arch Linux</a></li>
-  <li><a href="#2.-vm" id="toc-2.-vm" class="nav-link" data-scroll-target="#2.-vm">2. Create a New Virtual Machine</a></li>
-  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
-  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
-  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
-  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
-  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
-  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
-  <li><a href="#9.-ssh-config" id="toc-9.-ssh-config" class="nav-link active" data-scroll-target="#9.-ssh-config">9. SSH Configuration</a></li>
-  <li><a href="#10.-sudo-setup" id="toc-10.-sudo-setup" class="nav-link" data-scroll-target="#10.-sudo-setup">10. Sudo Setup</a></li>
-  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
-  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
-  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
-  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
-  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
-  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
-</ul>
+    <ul>
+      <li><a href="#1-install-an-iso-from-arch-linux">1. Install an ISO from Arch Linux</a></li>
+      <li><a href="#2-create-a-new-virtual-machine">2. Create a New Virtual Machine</a></li>
+      <li><a href="#3-partition-the-disk">3. Partition the Disk</a></li>
+      <li><a href="#4-mount-the-disk">4. Mount the Disk</a></li>
+      <li><a href="#5-install-the-operating-system">5. Install the Operating System</a></li>
+      <li><a href="#6-configure-system-and-boot-loader">6. Configure System and Boot Loader</a></li>
+      <li><a href="#7-network-configuration">7. Network Configuration</a></li>
+      <li><a href="#8-package-manager-configuration">8. Package Manager Configuration</a></li>
+      <li><a href="#9-ssh-configuration">9. SSH Configuration</a></li>
+      <li><a href="#10-sudo-setup">10. Sudo Setup</a></li>
+
+      <li><a href="#11-networkmanager-setup">11. NetworkManager Setup</a></li>
+      <li><a href="#12-kde-plasma-desktop-installation">12. KDE Plasma Desktop Installation</a></li>
+      <li><a href="#13-zsh-setup">13. ZSH Setup</a></li>
+      <li><a href="#14-add-other-users">14. Add other users</a></li>
+      <li><a href="#15-aliases-used">15. Aliases Used</a></li>
+      <li><a href="#16-customization">16. Customization</a></li>
+      <li><a href="#17-other-packages-i-like">17. Other Packages I like</a></li>
+      <li><a href="#sources">Sources</a></li>
+
+  </ul>
 </nav>
     </div>
 <!-- main -->
@@ -221,20 +225,20 @@ background: black;
 
 <h1 id="arch-installation-documentation">Arch Installation Documentation</h1>
 <blockquote>
-<p>[!TIP]
-Use the bash command 'set font: <code>-d</code>' to double your font size if it is hard to see.</p>
+  <p><strong>Tip</strong><br>
+  Use the bash command <code>set font: -d</code> to double your font size if it is hard to see.</p>
 </blockquote>
-<hr>
+
 <h2 id="1-install-an-iso-from-arch-linux">1. Install an ISO from <a href="https://archlinux.org/download/">Arch Linux</a></h2>
 <ul>
 <li>I chose one from MIT: <a href="https://mirrors.mit.edu/archlinux/iso/2024.10.01/">MIT Arch Linux ISO (2024.10.01)</a></li>
 </ul>
-<hr>
+
 <h2 id="2-create-a-new-virtual-machine">2. Create a New Virtual Machine</h2>
 <ul>
 <li>Set disk size to <strong>20GB</strong> and <strong>2GB of RAM</strong>.</li>
 </ul>
-<hr>
+
 <h2 id="3-partition-the-disk">3. Partition the Disk</h2>
 <ol>
 <li>Open the disk partition tool<pre class="hljs"><code><div>root@archiso ~ # cfdisk /dev/sda
@@ -277,14 +281,14 @@ root@archiso ~ # swapon -a
 </ul>
 </li>
 </ol>
-<hr>
+
 <h2 id="4-mount-the-disk">4. Mount the Disk</h2>
 <ul>
 <li>Mount the root partition<pre class="hljs"><code><div>root@archiso ~ # mount /dev/sda3 /mnt
 </div></code></pre>
 </li>
 </ul>
-<hr>
+
 <h2 id="5-install-the-operating-system">5. Install the Operating System</h2>
 <ul>
 <li>Copy OS files to the mounted disk:<pre class="hljs"><code><div>root@archiso ~ # pacstrap /mnt base linux linux-firmware nano grub dhcpcd
@@ -292,11 +296,11 @@ root@archiso ~ # swapon -a
 </li>
 </ul>
 <blockquote>
-<p>[!CAUTION]<br>
-Do not skip this step before you reboot.
-If you do not install dhcpcd before reboot you will not have network connectivity ever!</p>
+  <blockquote>
+    <p><strong>Caution</strong><br>
+    Do not skip this step before you reboot. If you do not install <code>dhcpcd</code> before reboot you will not have network connectivity ever!</p>
 </blockquote>
-<hr>
+
 <h2 id="6-configure-system-and-boot-loader">6. Configure System and Boot Loader</h2>
 <ol>
 <li>Generate the fstab file:<pre class="hljs"><code><div>root@archiso ~ # genfstab /mnt &gt;&gt; /mnt/etc/fstab
@@ -320,7 +324,7 @@ root@archiso ~ # reboot
 </li>
 <li>Log in as root.</li>
 </ol>
-<hr>
+
 <h2 id="7-network-configuration">7. Network Configuration</h2>
 <ul>
 <li>Start and enable the DHCP service for network management:<pre class="hljs"><code><div>[root@archiso /] # systemctl start dhcpcd
@@ -328,7 +332,7 @@ root@archiso ~ # reboot
 </div></code></pre>
 </li>
 </ul>
-<hr>
+
 <h2 id="8-package-manager-configuration">8. Package Manager Configuration</h2>
 <ol>
 <li>Edit the Pacman configuration:<pre class="hljs"><code><div>[root@archiso /] # nano /etc/pacman.conf
@@ -347,7 +351,7 @@ Include = /etc/pacman.d/mirrorlist
 </div></code></pre>
 </li>
 </ol>
-<hr>
+
 <h2 id="9-ssh-configuration">9. SSH Configuration</h2>
 <ol>
 <li>Install OpenSSH:<pre class="hljs"><code><div>[root@archiso /] # pacman -S openssh
@@ -358,7 +362,7 @@ Include = /etc/pacman.d/mirrorlist
 </div></code></pre>
 </li>
 </ol>
-<hr>
+
 <h2 id="10-sudo-setup">10. Sudo Setup</h2>
 <ol>
 <li>Install <code>sudo</code>:<pre class="hljs"><code><div>[root@archiso /] # pacman -S sudo
@@ -381,8 +385,8 @@ Include = /etc/pacman.d/mirrorlist
 </div></code></pre>
 </li>
 </ol>
-<hr>
-<h2 id="12-networkmanager-setup">12. NetworkManager Setup</h2>
+
+<h2 id="11-networkmanager-setup">11. NetworkManager Setup</h2>
 <ol>
 <li>Install NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # sudo pacman -S networkmanager
 </div></code></pre>
@@ -392,8 +396,8 @@ Include = /etc/pacman.d/mirrorlist
 </div></code></pre>
 </li>
 </ol>
-<hr>
-<h2 id="13-kde-plasma-desktop-installation">13. KDE Plasma Desktop Installation</h2>
+
+<h2 id="12-kde-plasma-desktop-installation">12. KDE Plasma Desktop Installation</h2>
 <ol>
 <li>Log in to your user account.</li>
 <li>Install KDE Plasma and SDDM display manager:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S plasma sddm
@@ -410,8 +414,8 @@ Include = /etc/pacman.d/mirrorlist
 </div></code></pre>
 </li>
 </ol>
-<hr>
-<h2 id="14-zsh-setup">14. ZSH Setup</h2>
+
+<h2 id="13-zsh-setup">13. ZSH Setup</h2>
 <ol>
 <li>Login as yourself, Open Konsole (you may get an error, since we haven't configured ZSH yet)</li>
 <li>Install Oh My Zsh:<pre class="hljs"><code><div>sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span>
@@ -433,8 +437,8 @@ Exit and save.</li>
 <p>[!TIP]
 Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with the terminal colors.</p>
 </blockquote>
-<hr>
-<h2 id="15-add-other-users">15. Add other users</h2>
+
+<h2 id="14-add-other-users">14. Add other users</h2>
 <ol>
 <li>
 <pre class="hljs"><code><div>sudo useradd -m -s /bin/zsh justin
@@ -451,8 +455,8 @@ Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with t
 </li>
 <li>Repeat for Codi</li>
 </ol>
-<hr>
-<h2 id="16-aliases-used">16. Aliases Used</h2>
+
+<h2 id="15-aliases-used">15. Aliases Used</h2>
 <ul>
 <li>Define helpful command aliases in <code>.zshrc</code> with the command:<pre class="hljs"><code><div>sudo nano ~/.zshrc
 </div></code></pre>
@@ -464,8 +468,8 @@ Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with t
 </div></code></pre>
 </li>
 </ul>
-<hr>
-<h2 id="17-customization">17. Customization</h2>
+
+<h2 id="16-customization">16. Customization</h2>
 <ol>
 <li>Hostname<pre class="hljs"><code><div>sudo nano /etc/hostname
 </div></code></pre>
@@ -487,7 +491,7 @@ Type your preferred name (I chose Pacman), then exit and save.</li>
 </li>
 </ol>
 <blockquote>
-<p>[!CAUTION]<br>
+  <p><strong>Caution</strong><br>
 CLICK BOTH Apply Plasma Settings (top toolbar) and Apply (bottom right).
 KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings (top toolbar), you will load into a black screen and will not be able to recover your GUI.</p>
 </blockquote>
@@ -499,14 +503,14 @@ KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings 
 </ul>
 </li>
 </ol>
-<hr>
-<h2 id="18-other-packages-i-like">18. Other Packages I like</h2>
+
+<h2 id="17-other-packages-i-like">17. Other Packages I like</h2>
 <ol>
 <li>tree</li>
 <li>neofetch</li>
 <li>cowsay</li>
 </ol>
-<hr>
+
 <h2 id="sources">Sources</h2>
 <ol>
 <li><a href="https://www.youtube.com/watch?v=l8YPS2itHfU">Straightforward Configuration</a></li>
