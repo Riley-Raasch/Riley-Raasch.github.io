@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Riley Raasch">
+<meta name="author" content="Pratik Kumar">
 <meta name="dcterms.date" content="2024-09-10">
 
-<title>Building a URL shortner – GeckoSec</title>
+<title>Building a URL shortner – devExplore</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../images/cute_gecko.png" rel="icon" type="image/png">
+<link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,7 +89,7 @@ background: black;
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Building a URL shortner – GeckoSec">
+<meta name="twitter:title" content="Building a URL shortner – devExplore">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="../post-images/4.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -102,11 +102,11 @@ background: black;
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../_sites/index.html" class="navbar-brand navbar-brand-cute_gecko">
-    <img src="../../images/cute_gecko.png" alt="" class="navbar-cute_gecko">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../../_sites/index.html">
-    <span class="navbar-title">GeckoSec</span>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">devExplore</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -116,11 +116,11 @@ background: black;
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../_sites/index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../_sites/about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
 </ul>
@@ -131,17 +131,17 @@ background: black;
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/riley-raasch-b79178220/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/pratik-kumar04/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/Riley-Raasch"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/pr2tik1"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://medium.com/@Riley-Raasch"> <i class="bi bi-medium" role="img">
+    <a class="nav-link" href="https://medium.com/@pr2tik1"> <i class="bi bi-medium" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -156,12 +156,10 @@ background: black;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Building a URL shortner</h1>
+      <h1 class="title">Arch Installation Documentation</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">System Design</div>
-                <div class="quarto-category">Python</div>
-                <div class="quarto-category">REST API</div>
-                <div class="quarto-category">Web Application</div>
+                <div class="quarto-category">System Administration</div>
+                <div class="quarto-category">Documentation</div>
               </div>
                   </div>
   </div>
@@ -179,7 +177,7 @@ background: black;
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 10, 2024</p>
+        <p class="date">October 24, 2024</p>
       </div>
     </div>
     
@@ -195,283 +193,330 @@ background: black;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a.-introduction" id="toc-a.-introduction" class="nav-link active" data-scroll-target="#a.-introduction">A. Introduction</a></li>
-  <li><a href="#b.-understanding-the-problem-and-establishing-design-scope" id="toc-b.-understanding-the-problem-and-establishing-design-scope" class="nav-link" data-scroll-target="#b.-understanding-the-problem-and-establishing-design-scope">B. Understanding the Problem and Establishing Design Scope</a>
-  <ul class="collapse">
-  <li><a href="#b.1.-scope-and-assumptions" id="toc-b.1.-scope-and-assumptions" class="nav-link" data-scroll-target="#b.1.-scope-and-assumptions">B.1. Scope and Assumptions</a></li>
-  </ul></li>
-  <li><a href="#c.-deep-dive-into-designing" id="toc-c.-deep-dive-into-designing" class="nav-link" data-scroll-target="#c.-deep-dive-into-designing">C. Deep-Dive into designing</a>
-  <ul class="collapse">
-  <li><a href="#c.1.-client-frontenduser-interface" id="toc-c.1.-client-frontenduser-interface" class="nav-link" data-scroll-target="#c.1.-client-frontenduser-interface">C.1. Client (Frontend/User Interface)</a></li>
-  <li><a href="#c.2.-server-backendapi" id="toc-c.2.-server-backendapi" class="nav-link" data-scroll-target="#c.2.-server-backendapi">C.2. <strong>Server (Backend/API)</strong></a></li>
-  <li><a href="#c.3.-load-balancer" id="toc-c.3.-load-balancer" class="nav-link" data-scroll-target="#c.3.-load-balancer">C.3. <strong>Load Balancer</strong></a></li>
-  <li><a href="#c.4.-caching-layer" id="toc-c.4.-caching-layer" class="nav-link" data-scroll-target="#c.4.-caching-layer">C.4. <strong>Caching Layer</strong></a></li>
-  <li><a href="#c.5.-database-storage" id="toc-c.5.-database-storage" class="nav-link" data-scroll-target="#c.5.-database-storage">C.5. <strong>Database (Storage)</strong></a></li>
-  <li><a href="#c.6.-url-generation-algorithm" id="toc-c.6.-url-generation-algorithm" class="nav-link" data-scroll-target="#c.6.-url-generation-algorithm">C.6. <strong>URL Generation Algorithm</strong></a></li>
-  </ul></li>
-  <li><a href="#d.-challenges-and-trade-offs" id="toc-d.-challenges-and-trade-offs" class="nav-link" data-scroll-target="#d.-challenges-and-trade-offs">D. Challenges and Trade-offs</a>
-  <ul class="collapse">
-  <li><a href="#scalability" id="toc-scalability" class="nav-link" data-scroll-target="#scalability">1. <strong>Scalability</strong></a></li>
-  <li><a href="#database-choice" id="toc-database-choice" class="nav-link" data-scroll-target="#database-choice">2. <strong>Database Choice</strong></a></li>
-  <li><a href="#collision-handling" id="toc-collision-handling" class="nav-link" data-scroll-target="#collision-handling">3. <strong>Collision Handling</strong></a></li>
-  <li><a href="#caching" id="toc-caching" class="nav-link" data-scroll-target="#caching">4. <strong>Caching</strong></a></li>
-  <li><a href="#redirection-speed" id="toc-redirection-speed" class="nav-link" data-scroll-target="#redirection-speed">5. <strong>Redirection Speed</strong></a></li>
-  <li><a href="#security" id="toc-security" class="nav-link" data-scroll-target="#security">6. <strong>Security</strong></a></li>
-  <li><a href="#url-expiration-analytics" id="toc-url-expiration-analytics" class="nav-link" data-scroll-target="#url-expiration-analytics">7. <strong>URL Expiration &amp; Analytics</strong></a></li>
-  </ul></li>
-  <li><a href="#e.-conclusion" id="toc-e.-conclusion" class="nav-link" data-scroll-target="#e.-conclusion">E. Conclusion</a>
-  <ul class="collapse">
-  <li><a href="#references-and-resources" id="toc-references-and-resources" class="nav-link" data-scroll-target="#references-and-resources">References and Resources</a></li>
-  </ul></li>
-  </ul>
+  <li><a href="#1.-install-iso" id="toc-1.-install-iso" class="nav-link active" data-scroll-target="#1.-install-iso">1. Install an ISO from Arch Linux</a></li>
+  <li><a href="#2.-vm" id="toc-2.-vm" class="nav-link" data-scroll-target="#2.-vm">2. Create a New Virtual Machine</a></li>
+  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
+  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
+  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
+  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
+  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
+  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
+  <li><a href="#9.-ssh-config" id="toc-9.-ssh-config" class="nav-link active" data-scroll-target="#9.-ssh-config">9. SSH Configuration</a></li>
+  <li><a href="#10.-sudo-setup" id="toc-10.-sudo-setup" class="nav-link" data-scroll-target="#10.-sudo-setup">10. Sudo Setup</a></li>
+  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
+  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
+  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
+  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
+  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
+  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
+</ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
+<!-- start readme -->
 
 
-
-<section id="a.-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="a.-introduction">A. Introduction</h2>
-<p>Designing a URL shortener, like <a href="https://tinyurl.com/app/features/about-us">TinyURL</a>, is a classic problem in system design that offers a great opportunity to explore key design concepts. It’s not just about shrinking URLs—there’s a lot more going on behind the scenes.</p>
-<p>In this blog, I’m excited to share how I approached this problem. I’ll walk you through my thought process, the challenges I faced, and the design decisions I made to turn long URLs into short, manageable links.</p>
-</section>
-<section id="b.-understanding-the-problem-and-establishing-design-scope" class="level2">
-<h2 class="anchored" data-anchor-id="b.-understanding-the-problem-and-establishing-design-scope">B. Understanding the Problem and Establishing Design Scope</h2>
-<p>Before diving into the design, let’s clarify the requirements of a URL Shortener service—what it does, why it’s needed, and who benefits from it.</p>
-<p>A URL shortener takes a long URL and converts it into a shorter, more manageable version. The primary goal is to create a compact web address that’s easier to share, remember, and track. This service typically shortens the URL by adding a random sequence of letters and numbers. For example, a URL shortener can transform a lengthy URL like:</p>
-<p><code>https://www.amazon.in/gp/product/B0CHX1W1XY/ref=s9_bw_cg_Budget_2f1_w</code></p>
-<p>into a much shorter one like:</p>
-<p><code>https://tinyurl.com/ypbd82wy</code></p>
-<section id="b.1.-scope-and-assumptions" class="level3">
-<h3 class="anchored" data-anchor-id="b.1.-scope-and-assumptions">B.1. Scope and Assumptions</h3>
-<p>Now that we have a clear understanding of what a URL Shortener is, let’s delve deeper into the specifics and outline the requirements. To do this, we’ll address the following questions:</p>
-<section id="b.1.1.-what-are-the-key-functional-features-required-for-this-service" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.1.-what-are-the-key-functional-features-required-for-this-service">B.1.1. What are the key functional features required for this service?</h4>
-<p>The service should convert a long URL into a short one, and when the shortened URL is accessed, it should redirect the user to the original long URL.</p>
-</section>
-<section id="b.1.2.-what-is-the-expected-duration-of-the-services-operation" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.2.-what-is-the-expected-duration-of-the-services-operation">B.1.2. What is the expected duration of the service’s operation?</h4>
-<p>For the purpose of this design, we’ll assume the service will run for the next 10 years.</p>
-</section>
-<section id="b.1.3.-how-many-urls-will-the-system-need-to-handle-simultaneously" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.3.-how-many-urls-will-the-system-need-to-handle-simultaneously">B.1.3. How many URLs will the system need to handle simultaneously?</h4>
-<p>We’ll assume the system may need to manage up to 1,000 URLs concurrently.</p>
-</section>
-<section id="b.1.4.-what-characters-will-be-used-in-the-shortened-urls" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.4.-what-characters-will-be-used-in-the-shortened-urls">B.1.4. What characters will be used in the shortened URLs?</h4>
-<p>The shortened URLs will use alphanumeric characters.</p>
-</section>
-<section id="b.1.5.-how-long-should-the-shortened-urls-be" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.5.-how-long-should-the-shortened-urls-be">B.1.5. How long should the shortened URLs be?</h4>
-<p>The URLs should be kept as short as possible while maintaining uniqueness.</p>
-</section>
-<section id="b.1.6.-what-should-happen-if-two-or-more-users-submit-the-same-long-url" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.6.-what-should-happen-if-two-or-more-users-submit-the-same-long-url">B.1.6. What should happen if two or more users submit the same long URL?</h4>
-<p>Initially, the same short URL can be returned for identical long URLs. In the future, we can incorporate analytics or additional metadata to create user-specific shortened URLs.</p>
+<h1 id="arch-installation-documentation">Arch Installation Documentation</h1>
+<blockquote>
+<p>[!TIP]
+Use the bash command 'set font: <code>-d</code>' to double your font size if it is hard to see.</p>
+</blockquote>
 <hr>
-<p>Next, we calculate the <strong>system’s capacity</strong> to ensure it can handle the required load. Given the need to manage around 1,000 URLs concurrently over a period of 10 years, we can estimate the total number of URLs the service will need to handle. The calculation is as follows:</p>
-<p>⇒ 60 seconds x 60 minutes x 24 hours x 365 days x 10 years x 1,000 URLs = 315 billion URLs over 10 years</p>
-<p>This means the system needs to generate <strong>at least</strong> <strong>315 billion unique URLs</strong> over the course of 10 years using alphanumeric short URLs.</p>
-<p>To determine how many characters are needed to support this capacity, we can calculate:</p>
-<p>⇒ Alphanumeric characters: a-z (26) + A-Z (26) + 0-9 (10) = 62 possible combinations</p>
-<p>⇒ Since 62^7 = 3.5 trillion, using <strong>7 characters</strong> will provide more than enough combinations to handle the required number of URLs over the next 10 years.</p>
-<p>For each URL, let’s estimate the space required:</p>
+<h2 id="1-install-an-iso-from-arch-linux">1. Install an ISO from <a href="https://archlinux.org/download/">Arch Linux</a></h2>
 <ul>
-<li><p><strong>Shortened URL</strong>: 7 bytes (1-2 bytes per character)</p></li>
-<li><p><strong>Long URL</strong>: Assume around 100 bytes</p></li>
-<li><p><strong>Metadata</strong>: 500 bytes (e.g., userId, isValid status)</p></li>
+<li>I chose one from MIT: <a href="https://mirrors.mit.edu/archlinux/iso/2024.10.01/">MIT Arch Linux ISO (2024.10.01)</a></li>
 </ul>
-<p>This totals approximately <strong>1,000 bytes</strong> per URL.</p>
-<p>Given the need to store 315 billion URLs over 10 years:</p>
-<p>⇒ 1,000 bytes x 315 billion URLs = <strong>315 TB</strong> of storage space required.</p>
-</section>
-</section>
-</section>
-<section id="c.-deep-dive-into-designing" class="level2">
-<h2 class="anchored" data-anchor-id="c.-deep-dive-into-designing">C. Deep-Dive into designing</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-<section id="c.1.-client-frontenduser-interface" class="level3">
-<h3 class="anchored" data-anchor-id="c.1.-client-frontenduser-interface">C.1. Client (Frontend/User Interface)</h3>
-<p>The frontend is where users interact with the URL shortener. It’s the part of the application that makes shortening URLs easy and intuitive. The challenge here is to design a user interface (UI) that is both simple and powerful without unnecessary complexities.</p>
-<section id="c.1.1.-frontend-design-simplified-for-usability" class="level4">
-<h4 class="anchored" data-anchor-id="c.1.1.-frontend-design-simplified-for-usability">C.1.1. <strong>Frontend Design: Simplified for Usability</strong></h4>
-<ol type="1">
-<li><p><strong>Basic Form – The Core Interaction</strong><br>
-Every URL shortener needs a form where users can input their long URLs. But simplicity is key. A clean, minimal form with just one field (for the long URL) and a button (to generate the short link) reduces cognitive load for users. Users don’t want to be bombarded with options—just a quick, easy solution to shorten their URLs.</p></li>
-<li><p><strong>Optional Tracking – Adding Value with Insights</strong><br>
-Some users may want more than just shortened URLs. Adding a feature for tracking how many times each short URL was clicked gives users insights into how their links are performing. This feature could be optional, visible only to users who need it. By offering advanced analytics, we provide added value to the core functionality.</p></li>
+<hr>
+<h2 id="2-create-a-new-virtual-machine">2. Create a New Virtual Machine</h2>
+<ul>
+<li>Set disk size to <strong>20GB</strong> and <strong>2GB of RAM</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-partition-the-disk">3. Partition the Disk</h2>
+<ol>
+<li>Open the disk partition tool<pre class="hljs"><code><div>root@archiso ~ # cfdisk /dev/sda
+</div></code></pre>
+</li>
+<li>Select the <code>gpt</code> option.</li>
 </ol>
-<p><strong>Tech Stack Consideration</strong>: For the frontend, using modern frameworks like <strong>React</strong> or <strong>Vue.js</strong> allows for a fast, responsive interface. These frameworks also make it easier to scale and add new features as the project evolves. We can also utilise <strong>Tailwind.css</strong> or <strong>shadcn-ui</strong> to give a minimalistic look.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-6.png" class="img-fluid figure-img" width="686"></p>
-<figcaption>Fronted of the URL Shortener App (https://github.com/Riley-Raasch/url-shortner-service)</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="c.2.-server-backendapi" class="level3">
-<h3 class="anchored" data-anchor-id="c.2.-server-backendapi">C.2. <strong>Server (Backend/API)</strong></h3>
-<p>The backend is where the heavy lifting happens. It processes the logic, manages the data, and ensures that requests are handled efficiently. The decisions made here directly impact the system’s scalability and performance.</p>
-<section id="c.2.1.-core-api-functions-the-building-blocks" class="level4">
-<h4 class="anchored" data-anchor-id="c.2.1.-core-api-functions-the-building-blocks">C.2.1. <strong>Core API Functions: The Building Blocks</strong></h4>
-<ol type="1">
-<li><p><strong>Shorten URL – Creating Unique Short Links</strong><br>
-The core functionality of the backend is to accept long URLs from the frontend, generate unique short URLs, and store this mapping in a database. There are different ways to generate short URLs. You could use <strong>hashing algorithms</strong> (e.g., MD5 or SHA-256) or a <strong>counter-based system</strong> that assigns a unique ID for each URL and encodes it (e.g., using Base62).</p>
-<p>Hashing ensures that similar URLs produce distinct results, while a counter-based system can be faster but may require additional collision checks. Both approaches scale well but differ in complexity and performance.</p></li>
-<li><p><strong>Redirect URL – Efficient Lookup and Redirection</strong><br>
-When a user accesses a short URL, the backend retrieves the corresponding long URL from the database and redirects the user. This operation needs to be lightning-fast to avoid any latency in the user experience. By using indexed database queries and possibly caching frequently accessed short URLs, we can ensure efficient lookups and near-instantaneous redirection.</p>
-<p>Optimizing database lookups (e.g., through caching) and ensuring that the redirection process is swift prevents slowdowns and improves the overall user experience.</p></li>
-<li><p><strong>Analytics API (Optional) – Tracking Engagement</strong><br>
-If you want to give users the ability to track how often their links are used, an analytics API can be added to collect data such as click counts, user demographics, or referral sources. Implementing this feature requires balancing between data collection and performance, ensuring that analytics don’t slow down the core functionality.</p>
-<p>Offering analytics as an optional feature allows users to gain valuable insights into their links’ performance, adding another dimension to the service.</p></li>
+<p><img src="https://github.com/user-attachments/assets/650e58dd-82eb-4a67-8be8-ef0fa7f71d0a" alt="image"></p>
+<ol start="3">
+<li>Create a 1MB partition for BIOS boot:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>1M</code>.</li>
+<li>Select partition type: <strong>BIOS Boot</strong>.</li>
+</ul>
+</li>
+<li>Create a 4GB partition for Linux Swap:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>4G</code>.</li>
+<li>Select partition type: <strong>Linux Swap</strong>.</li>
+</ul>
+</li>
+<li>Create a 16GB partition for the root file system:
+<ul>
+<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
+<li>Set partition size: <code>16</code>.</li>
+</ul>
+</li>
+<li>Write changes and exit.</li>
+<li>Format partitions:
+<ul>
+<li>Format root partition (ext4):<pre class="hljs"><code><div>root@archiso ~ # mkfs.ext4 /dev/sda3
+</div></code></pre>
+</li>
+<li>Set up swap partition:<pre class="hljs"><code><div>root@archiso ~ # mkswap /dev/sda2
+root@archiso ~ # swapon -a
+</div></code></pre>
+</li>
+</ul>
+</li>
 </ol>
-<p><strong>Tech Stack Consideration</strong>: For the backend, using a highly scalable and fast server-side language like <strong>Node.js</strong>, <strong>Python</strong>, or <strong>Go</strong> is ideal. These languages have great frameworks (like Express.js for Node.js or Flask for Python) that handle API requests efficiently.</p>
-<p>Here are the API endpoints that can be created to support these feature:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="617"></p>
-</figure>
-</div>
-</section>
-<section id="c.2.2.-backend-logic-how-it-all-works-together" class="level4">
-<h4 class="anchored" data-anchor-id="c.2.2.-backend-logic-how-it-all-works-together">C.2.2. Backend Logic : How It All Works Together</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="833"></p>
-</figure>
-</div>
+<hr>
+<h2 id="4-mount-the-disk">4. Mount the Disk</h2>
 <ul>
-<li><strong>URL Shortening Process</strong><br>
-When a user submits a long URL, the backend generates a unique short link. This could be achieved through hashing or by assigning a unique ID. The URL pair is then stored in the database. A system like <strong>MongoDB</strong> or <strong>MySQL</strong> can be used, depending on the size and complexity of the project. NoSQL databases like MongoDB are great for flexibility and scalability, especially if you expect to store billions of URLs.</li>
+<li>Mount the root partition<pre class="hljs"><code><div>root@archiso ~ # mount /dev/sda3 /mnt
+</div></code></pre>
+</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="546"></p>
-</figure>
-</div>
+<hr>
+<h2 id="5-install-the-operating-system">5. Install the Operating System</h2>
 <ul>
-<li><strong>Redirection Process</strong><br>
-Upon accessing a short URL, the backend retrieves the original URL from the database and redirects the user. If a caching layer (like Redis) is used, popular URLs can be served even faster, reducing the load on the database and improving response times.</li>
+<li>Copy OS files to the mounted disk:<pre class="hljs"><code><div>root@archiso ~ # pacstrap /mnt base linux linux-firmware nano grub dhcpcd
+</div></code></pre>
+</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/paste-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="523"></p>
-</figure>
-</div>
+<blockquote>
+<p>[!CAUTION]<br>
+Do not skip this step before you reboot.
+If you do not install dhcpcd before reboot you will not have network connectivity ever!</p>
+</blockquote>
+<hr>
+<h2 id="6-configure-system-and-boot-loader">6. Configure System and Boot Loader</h2>
+<ol>
+<li>Generate the fstab file:<pre class="hljs"><code><div>root@archiso ~ # genfstab /mnt &gt;&gt; /mnt/etc/fstab
+</div></code></pre>
+</li>
+<li>Chroot into the installed system:<pre class="hljs"><code><div>root@archiso ~ # arch-chroot /mnt
+</div></code></pre>
+</li>
+<li>Set the root password:<pre class="hljs"><code><div>[root@archiso /] # passwd
+</div></code></pre>
+</li>
+<li>Install GRUB bootloader:<pre class="hljs"><code><div>[root@archiso /] # grub-install /dev/sda
+</div></code></pre>
+</li>
+<li>Generate GRUB configuration file:<pre class="hljs"><code><div>[root@archiso /] # grub-mkconfig -o /boot/grub/grub.cfg
+</div></code></pre>
+</li>
+<li>Exit chroot environment and reboot:<pre class="hljs"><code><div>[root@archiso /] # exit
+root@archiso ~ # reboot
+</div></code></pre>
+</li>
+<li>Log in as root.</li>
+</ol>
+<hr>
+<h2 id="7-network-configuration">7. Network Configuration</h2>
 <ul>
-<li><strong>Analytics (Optional)</strong><br>
-If analytics are enabled, the backend can track each visit to the short URL. Data such as the number of clicks, user details, and timestamps can be stored for further analysis. However, it’s essential to balance this tracking to avoid impacting performance.</li>
+<li>Start and enable the DHCP service for network management:<pre class="hljs"><code><div>[root@archiso /] # systemctl start dhcpcd
+[root@archiso /] # systemctl enable dhcpcd
+</div></code></pre>
+</li>
 </ul>
-</section>
-<section id="c.2.3.-tech-stack" class="level4">
-<h4 class="anchored" data-anchor-id="c.2.3.-tech-stack">C.2.3. Tech Stack</h4>
-<p>To ensure efficient processing and scalability, the following technologies can be used:</p>
+<hr>
+<h2 id="8-package-manager-configuration">8. Package Manager Configuration</h2>
+<ol>
+<li>Edit the Pacman configuration:<pre class="hljs"><code><div>[root@archiso /] # nano /etc/pacman.conf
+</div></code></pre>
 <ul>
-<li><p><strong>Language</strong>: Common backend languages include <strong>Node.js</strong>, <strong>Python</strong>, or <strong>Go</strong>.</p></li>
-<li><p><strong>Framework</strong>: The backend framework can be <strong>Express.js</strong> (Node.js), <strong>Flask</strong> (Python), or <strong>Gin</strong> (Go) to handle API requests efficiently.</p></li>
-<li><p><strong>Database</strong>: Data can be stored in either a relational database like <strong>MySQL</strong> or a NoSQL database like <strong>MongoDB</strong> to support large-scale URL mappings.</p></li>
+<li>Scroll down and uncomment the following lines to enable multilib:<pre class="hljs"><code><div>#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+</div></code></pre>
+<pre class="hljs"><code><div>[multilib]
+Include = /etc/pacman.d/mirrorlist
+</div></code></pre>
+</li>
 </ul>
-<p>This backend design ensures that the service is scalable, fast, and capable of handling high volumes of traffic with optional analytics support.</p>
-</section>
-</section>
-<section id="c.3.-load-balancer" class="level3">
-<h3 class="anchored" data-anchor-id="c.3.-load-balancer">C.3. <strong>Load Balancer</strong></h3>
-<p>As the popularity of our URL shortener grows, managing increased traffic becomes critical to avoid downtime and ensure seamless user experience. A load balancer is a key component that distributes incoming traffic across multiple servers, ensuring no single server bears too much load, which could lead to crashes or performance degradation.</p>
-<p><strong>Strategy</strong>: To evenly distribute traffic, we can use algorithms like <strong>Round-Robin</strong> or <strong>Least Connections</strong>. Round-Robin cycles through servers in a balanced way, while Least Connections ensures that servers with fewer active requests receive more traffic, optimizing overall performance.</p>
-<p><strong>Tech Stack</strong>: Tools like <strong>Nginx</strong> or <strong>AWS Elastic Load Balancing</strong> are well-suited for handling traffic distribution across multiple servers efficiently.</p>
-<p>Implementing load balancing ensures higher availability and prevents bottlenecks by spreading out the traffic, making sure no single server is overwhelmed. This not only improves reliability but also optimizes resource utilization, especially as traffic scales.</p>
-</section>
-<section id="c.4.-caching-layer" class="level3">
-<h3 class="anchored" data-anchor-id="c.4.-caching-layer">C.4. <strong>Caching Layer</strong></h3>
-<p>Frequent database lookups can slow down response times, especially as the user base grows. A caching layer helps mitigate this by storing frequently accessed URL mappings in memory, allowing the system to retrieve data much faster than querying the database each time.</p>
-<p><strong>Strategy</strong>: The caching layer should prioritize storing the most popular URL mappings. By using policies like <strong>Least Recently Used (LRU)</strong>, the cache remains efficient, keeping the most relevant data available in memory while discarding outdated information.</p>
-<p><strong>Tech Stack</strong>: Tools like <strong>Redis</strong> or <strong>Memcached</strong> are excellent choices for building a robust caching layer. Both provide high-speed, in-memory data storage that significantly reduces the load on the database and improves response times.</p>
-<p>Caching reduces the need for repeated database queries, enhancing the performance of frequently accessed URLs and providing a smoother user experience. By alleviating pressure on the database, the system scales more effectively without sacrificing speed.</p>
-</section>
-<section id="c.5.-database-storage" class="level3">
-<h3 class="anchored" data-anchor-id="c.5.-database-storage">C.5. <strong>Database (Storage)</strong></h3>
-<p>To support millions, or even billions, of URL mappings, a well-designed and scalable database is essential. The database must efficiently store, query, and update URL mappings, ensuring the system can handle high volumes of both reads and writes.</p>
-<p><strong>Schema Design</strong>: The database schema should store short URL mappings alongside their original long URLs, user-related metadata, and expiration details (if applicable). Key fields include:</p>
+</li>
+<li>Update package lists:<pre class="hljs"><code><div>[root@archiso /] # pacman -Syy
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="9-ssh-configuration">9. SSH Configuration</h2>
+<ol>
+<li>Install OpenSSH:<pre class="hljs"><code><div>[root@archiso /] # pacman -S openssh
+</div></code></pre>
+</li>
+<li>Start and enable the SSH service:<pre class="hljs"><code><div>[root@archiso /] # systemctl start sshd
+[root@archiso /] # systemctl enable sshd
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="10-sudo-setup">10. Sudo Setup</h2>
+<ol>
+<li>Install <code>sudo</code>:<pre class="hljs"><code><div>[root@archiso /] # pacman -S sudo
+</div></code></pre>
+</li>
+<li>Edit the sudoers file:<pre class="hljs"><code><div>[root@archiso /] # EDITOR=nano visudo
+</div></code></pre>
 <ul>
-<li><p><strong>short_url</strong>: The unique identifier for the shortened URL.</p></li>
-<li><p><strong>long_url</strong>: The original URL.</p></li>
-<li><p><strong>user_id</strong> (optional): To track ownership if needed.</p></li>
-<li><p><strong>is_valid</strong>: Indicates if the shortened URL is still active.</p></li>
-<li><p><strong>created_at</strong>, <strong>expires_at</strong>: For tracking URL expiration or time-sensitive URLs.</p></li>
+<li>Uncomment this line so that users in group wheel have sudo permissions:<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
+#%wheel ALL=(ALL) ALL
+</div></code></pre>
+<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
+%wheel ALL=(ALL) ALL
+</div></code></pre>
+</li>
 </ul>
-<p><strong>Scalability</strong>: Choosing the right database is crucial for handling large-scale operations. <strong>MySQL</strong> works well for structured data and is suitable for smaller applications. However, <strong>MongoDB</strong> (NoSQL) is often a better choice for larger, more flexible applications that need to scale horizontally, especially when dealing with unstructured or rapidly growing data.</p>
-<p><strong>Sharding and Replication</strong>: As the system grows, <strong>sharding</strong> (dividing the database into smaller, more manageable parts) and <strong>replication</strong> (duplicating data across multiple servers) become essential for maintaining high performance and availability. These techniques distribute the load, ensuring the system remains responsive as it scales.</p>
-<p>By designing a scalable and efficient database schema, you ensure the system can handle growth without experiencing performance bottlenecks. Proper sharding and replication strategies help maintain fast read and write operations, which is critical for any high-traffic application.</p>
-</section>
-<section id="c.6.-url-generation-algorithm" class="level3">
-<h3 class="anchored" data-anchor-id="c.6.-url-generation-algorithm">C.6. <strong>URL Generation Algorithm</strong></h3>
-<p>Generating unique and reliable short URLs is the core of any URL shortener. The right algorithm ensures that each URL gets a distinct short link without clashes.</p>
+</li>
+<li>Add yourself as a sudo user:<pre class="hljs"><code><div>[root@archiso /] # sudo useradd -m riley
+[root@archiso /] # sudo usermod -aG wheel riley
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="12-networkmanager-setup">12. NetworkManager Setup</h2>
+<ol>
+<li>Install NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # sudo pacman -S networkmanager
+</div></code></pre>
+</li>
+<li>Start and enable NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # systemctl start NetworkManager
+[root@archiso /] # systemctl enable NetworkManager
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="13-kde-plasma-desktop-installation">13. KDE Plasma Desktop Installation</h2>
+<ol>
+<li>Log in to your user account.</li>
+<li>Install KDE Plasma and SDDM display manager:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S plasma sddm
+</div></code></pre>
+</li>
+<li>Install additional software:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S konsole kate firefox zsh git
+</div></code></pre>
+</li>
+<li>Set ZSH as the default shell:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ chsh -s $(which zsh)
+</div></code></pre>
+</li>
+<li>Enable SDDM for graphical login:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo systemctl enable sddm
+[riley@ArchLinux ~]$ sudo systemctl enable --now sddm
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="14-zsh-setup">14. ZSH Setup</h2>
+<ol>
+<li>Login as yourself, Open Konsole (you may get an error, since we haven't configured ZSH yet)</li>
+<li>Install Oh My Zsh:<pre class="hljs"><code><div>sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span>
+</div></code></pre>
+</li>
+<li>Edit the Zsh configuration file:<pre class="hljs"><code><div>nano ~/.zshrc
+</div></code></pre>
 <ul>
-<li><strong>Hash-Based Approach</strong>: One method is using a <strong>hashing algorithm</strong> like <strong>MD5</strong> or <strong>SHA-256</strong> to generate a unique short link for each URL. Hashing is useful because it consistently generates distinct outputs, even for similar inputs, making it ideal for creating unique URLs.</li>
+<li>Set the theme to <code>bira</code>:<pre class="hljs"><code><div>ZSH_THEME=&quot;bira&quot;
+</div></code></pre>
+Exit and save.</li>
+<li>Restart ZSH:<pre class="hljs"><code><div>source ~/.zshrc
+</div></code></pre>
+</li>
 </ul>
-<!-- -->
+</li>
+</ol>
+<blockquote>
+<p>[!TIP]
+Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with the terminal colors.</p>
+</blockquote>
+<hr>
+<h2 id="15-add-other-users">15. Add other users</h2>
+<ol>
+<li>
+<pre class="hljs"><code><div>sudo useradd -m -s /bin/zsh justin
+</div></code></pre>
+</li>
+<li>Set the password for the user:<pre class="hljs"><code><div><span class="hljs-built_in">echo</span> <span class="hljs-string">"justin:GraceHopper1906"</span> | sudo chpasswd
+</div></code></pre>
+</li>
+<li>Force the user to change the password on the next login:<pre class="hljs"><code><div>sudo chage -d 0 justin
+</div></code></pre>
+</li>
+<li>Set sudo permissions:<pre class="hljs"><code><div> sudo usermod -aG wheel justin
+</div></code></pre>
+</li>
+<li>Repeat for Codi</li>
+</ol>
+<hr>
+<h2 id="16-aliases-used">16. Aliases Used</h2>
 <ul>
-<li><strong>Counter-Based Approach</strong>: Alternatively, a <strong>counter-based system</strong> can assign a unique ID to each new URL. The ID is then encoded (e.g., using <strong>Base62</strong>) to generate a short URL. While this method is faster, it requires careful tracking to avoid collisions and may involve a little more overhead in maintaining uniqueness.</li>
+<li>Define helpful command aliases in <code>.zshrc</code> with the command:<pre class="hljs"><code><div>sudo nano ~/.zshrc
+</div></code></pre>
+</li>
+<li>Set your aliases<pre class="hljs"><code><div><span class="hljs-built_in">alias</span> c=<span class="hljs-string">'clear'</span>
+<span class="hljs-built_in">alias</span> get=<span class="hljs-string">'sudo pacman -S'</span>
+<span class="hljs-built_in">alias</span> <span class="hljs-built_in">cd</span>..=<span class="hljs-string">'cd ..'</span>
+<span class="hljs-built_in">alias</span> update=<span class="hljs-string">'sudo pacman -Syu'</span>
+</div></code></pre>
+</li>
 </ul>
-<!-- -->
+<hr>
+<h2 id="17-customization">17. Customization</h2>
+<ol>
+<li>Hostname<pre class="hljs"><code><div>sudo nano /etc/hostname
+</div></code></pre>
+Type your preferred name (I chose Pacman), then exit and save.</li>
+<li>Wallpaper
 <ul>
-<li><strong>Collision Handling</strong>: Regardless of the approach, handling potential collisions (two URLs generating the same short link) is essential. If a collision is detected, a strategy like <strong>rehashing</strong> the URL or incrementing the counter can be used to generate a new, unique short link.</li>
+<li>Go to System Settings, then Quick Settings, Wallpaper, + Add, navigate to your image, Open, Apply</li>
 </ul>
-<p>By selecting the right URL generation strategy and preparing for potential collisions, you ensure that the system consistently generates unique short links without errors. This step is crucial for maintaining data integrity and preventing conflicts within the system.</p>
-</section>
-</section>
-<section id="d.-challenges-and-trade-offs" class="level2">
-<h2 class="anchored" data-anchor-id="d.-challenges-and-trade-offs">D. Challenges and Trade-offs</h2>
-<p>Building a URL shortener involves several challenges and trade-offs that need to be carefully managed to ensure efficiency, scalability, and reliability:</p>
-<section id="scalability" class="level3">
-<h3 class="anchored" data-anchor-id="scalability">1. <strong>Scalability</strong></h3>
-<p>As traffic grows, handling it effectively requires strategies like load balancing, caching, and database sharding. These ensure that the system can handle increased requests without performance bottlenecks or downtime.</p>
-</section>
-<section id="database-choice" class="level3">
-<h3 class="anchored" data-anchor-id="database-choice">2. <strong>Database Choice</strong></h3>
-<p>Choosing between SQL and NoSQL is critical. SQL databases provide structure and consistency but may struggle under heavy loads. NoSQL databases, like MongoDB, scale better for high traffic but may compromise on data consistency, making the choice a balance between structure and scalability.</p>
-</section>
-<section id="collision-handling" class="level3">
-<h3 class="anchored" data-anchor-id="collision-handling">3. <strong>Collision Handling</strong></h3>
-<p>In hash or counter-based URL generation, the risk of collisions—where two URLs generate the same short link—must be addressed. The trade-off here is between speed and ensuring uniqueness, as more reliable methods may be slower.</p>
-</section>
-<section id="caching" class="level3">
-<h3 class="anchored" data-anchor-id="caching">4. <strong>Caching</strong></h3>
-<p>Caching frequently accessed URLs helps improve response times, but improper cache management can lead to outdated or stale data. Implementing policies like Least Recently Used (LRU) helps strike a balance between performance and data freshness.</p>
-</section>
-<section id="redirection-speed" class="level3">
-<h3 class="anchored" data-anchor-id="redirection-speed">5. <strong>Redirection Speed</strong></h3>
-<p>To ensure users are quickly redirected, optimizing redirection speed through in-memory caching solutions like Redis is crucial. However, managing memory efficiently becomes a challenge as the system scales.</p>
-</section>
-<section id="security" class="level3">
-<h3 class="anchored" data-anchor-id="security">6. <strong>Security</strong></h3>
-<p>Preventing malicious use of shortened URLs adds complexity. Implementing URL filtering and validation checks ensures security but may slow down the overall process.</p>
-</section>
-<section id="url-expiration-analytics" class="level3">
-<h3 class="anchored" data-anchor-id="url-expiration-analytics">7. <strong>URL Expiration &amp; Analytics</strong></h3>
-<p>Handling expiring URLs adds complexity to the database and requires scheduled cleanup. Additionally, tracking analytics like clicks and user data provides value but increases storage and processing demands, potentially affecting overall performance.</p>
-<p>Effectively balancing these factors allows the URL shortener to be scalable, fast, and secure, while still providing a smooth user experience.</p>
-</section>
-</section>
-<section id="e.-conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="e.-conclusion">E. Conclusion</h2>
-<p>In conclusion, designing a URL shortener system involves much more than just converting long URLs into shorter ones. The process requires careful consideration of system scalability, efficient URL storage and retrieval, and the potential for additional features like analytics and custom URL generation. By tackling challenges like efficient database querying, implementing caching layers, and balancing server loads, a robust, scalable service can be created that meets user needs while maintaining performance.</p>
-<p>This deep dive into the key design components—such as the frontend, backend, load balancing, and database architecture—provides valuable insights into the thought processes and technical decisions behind building a URL shortener. Whether it’s optimizing user experience, ensuring the system can handle billions of URLs, or planning for future growth, the design choices made here lay the groundwork for a reliable, scalable URL shortening service that’s ready to handle real-world demands.</p>
-<p>I hope this exploration has offered useful strategies and insights. Thank you !</p>
-<section id="references-and-resources" class="level3">
-<h3 class="anchored" data-anchor-id="references-and-resources">References and Resources</h3>
+</li>
+<li>Theme
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/TinyURL" class="uri">https://en.wikipedia.org/wiki/TinyURL</a></li>
+<li>Go to System Settings, then Quick Settings, click Breeze (dark mode), Apply</li>
 </ul>
+</li>
+<li>Lock Screen
+<ul>
+<li>Go to System Settings, then Colors &amp; Themes, Login Screen (SDDM), select Breeze, Click the picture icon, Load From File..., navigate to your image, Open, Apply Plasma Settings (top toolbar), Apply (bottom right), restart</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!CAUTION]<br>
+CLICK BOTH Apply Plasma Settings (top toolbar) and Apply (bottom right).
+KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings (top toolbar), you will load into a black screen and will not be able to recover your GUI.</p>
+</blockquote>
+<ol start="5">
+<li>Timezone
+<ul>
+<li>Date &amp; Time, set date and time automatically, Time Zone (top Right), search for your region (CHicago in my case), click it, Apply</li>
+<li>Click on the time (Bottom Right of your Desktop), Click Digital Clock Settings (Top right of time window), click the drop down to select 12-Hour time, Apply</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="18-other-packages-i-like">18. Other Packages I like</h2>
+<ol>
+<li>tree</li>
+<li>neofetch</li>
+<li>cowsay</li>
+</ol>
+<hr>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=l8YPS2itHfU">Straightforward Configuration</a></li>
+<li><a href="https://www.youtube.com/watch?v=68z11VAYMS8&amp;t">KDE Plasma Guidance</a></li>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide">Arch Wiki</a></li>
+</ol>
 
+</body>
+
+<!-- end readme -->
 
 </section>
 </section>
@@ -897,7 +942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="Riley-Raasch/Riley-Raasch.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="pr2tik1/Riley-Raasch.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
@@ -908,7 +953,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../_sites/about.html">
+    <a class="nav-link" href="../../about.html">
 <p>About</p>
 </a>
   </li>  
