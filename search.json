@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": " GeckoSec ",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBuilding a URL shortner\n\n\n\n\n\n\nSystem Design\n\n\nPython\n\n\nREST API\n\n\nWeb Application\n\n\n\n\n\n\n\n\n\nSep 10, 2024\n\n\nRiley Raasch\n\n\n14 min\n\n\n\n\n\n\n\n\n\n\n\n\nSimplifying R Package Management - renv vs packrat\n\n\n\n\n\n\nR\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJan 19, 2024\n\n\nRiley Raasch\n\n\n5 min\n\n\n\n\n\n\n\n\n\n\n\n\nEfficient project management using Dockers\n\n\n\n\n\n\nDockers\n\n\nPython\n\n\nR\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJul 31, 2023\n\n\nRiley Raasch\n\n\n6 min\n\n\n\n\n\n\n\n\n\n\n\n\nHierarchical Data Visualization Demystified\n\n\n\n\n\n\nData Visualization\n\n\nPlotly\n\n\nPython\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nRiley Raasch\n\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\n\nLoan Status Prediction\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\nPython\n\n\nMachine Learning\n\n\nFeature Engineering\n\n\nKaggle\n\n\n\n\n\n\n\n\n\nApr 25, 2021\n\n\nRiley Raasch\n\n\n8 min\n\n\n\n\n\n\n\n\n\n\n\n\nTitanic Survival Prediction\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\nPython\n\n\nMachine Learning\n\n\nFeature Engineering\n\n\nKaggle\n\n\n\n\n\n\n\n\n\nMar 21, 2021\n\n\nRiley Raasch\n\n\n15 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nArch Installation Documentation\n\n\n\n\n\n\nSystem Design\n\n\nPython\n\n\nREST API\n\n\nWeb Application\n\n\n\n\n\n\n\n\n\nSep 10, 2024\n\n\nRiley Raasch\n\n\n14 min\n\n\n\n\n\n\n\n\n\n\n\n\nSimplifying R Package Management - renv vs packrat\n\n\n\n\n\n\nR\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJan 19, 2024\n\n\nRiley Raasch\n\n\n5 min\n\n\n\n\n\n\n\n\n\n\n\n\nEfficient project management using Dockers\n\n\n\n\n\n\nDockers\n\n\nPython\n\n\nR\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJul 31, 2023\n\n\nRiley Raasch\n\n\n6 min\n\n\n\n\n\n\n\n\n\n\n\n\nHierarchical Data Visualization Demystified\n\n\n\n\n\n\nData Visualization\n\n\nPlotly\n\n\nPython\n\n\nCoding Practices\n\n\n\n\n\n\n\n\n\nJun 19, 2023\n\n\nRiley Raasch\n\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\n\nLoan Status Prediction\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\nPython\n\n\nMachine Learning\n\n\nFeature Engineering\n\n\nKaggle\n\n\n\n\n\n\n\n\n\nApr 25, 2021\n\n\nRiley Raasch\n\n\n8 min\n\n\n\n\n\n\n\n\n\n\n\n\nTitanic Survival Prediction\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\nPython\n\n\nMachine Learning\n\n\nFeature Engineering\n\n\nKaggle\n\n\n\n\n\n\n\n\n\nMar 21, 2021\n\n\nRiley Raasch\n\n\n15 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -22,149 +22,149 @@
   },
 
   {
-    "objectID": "posts/system-design/short-url.html",
-    "href": "posts/system-design/short-url.html",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html",
+    "href": "posts/system-design/arch-install.html",
+    "title": "Arch Installation Documentation",
     "section": "",
     "text": "Designing a URL shortener, like TinyURL, is a classic problem in system design that offers a great opportunity to explore key design concepts. It’s not just about shrinking URLs—there’s a lot more going on behind the scenes.\nIn this blog, I’m excited to share how I approached this problem. I’ll walk you through my thought process, the challenges I faced, and the design decisions I made to turn long URLs into short, manageable links."
   },
   {
-    "objectID": "posts/system-design/short-url.html#introduction",
-    "href": "posts/system-design/short-url.html#introduction",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#introduction",
+    "href": "posts/system-design/arch-install.html#introduction",
+    "title": "Arch Installation Documentation",
     "section": "",
     "text": "Designing a URL shortener, like TinyURL, is a classic problem in system design that offers a great opportunity to explore key design concepts. It’s not just about shrinking URLs—there’s a lot more going on behind the scenes.\nIn this blog, I’m excited to share how I approached this problem. I’ll walk you through my thought process, the challenges I faced, and the design decisions I made to turn long URLs into short, manageable links. Whether you’re curious about URL mapping, efficient lookups, or scaling the solution, I hope my journey will give you some valuable insights and ideas for your own projects."
   },
   {
-    "objectID": "posts/system-design/short-url.html#requirements-and-goals",
-    "href": "posts/system-design/short-url.html#requirements-and-goals",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#requirements-and-goals",
+    "href": "posts/system-design/arch-install.html#requirements-and-goals",
+    "title": "Arch Installation Documentation",
     "section": "Requirements and Goals",
     "text": "Requirements and Goals"
   },
   {
-    "objectID": "posts/system-design/short-url.html#design-and-considerations",
-    "href": "posts/system-design/short-url.html#design-and-considerations",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#design-and-considerations",
+    "href": "posts/system-design/arch-install.html#design-and-considerations",
+    "title": "Arch Installation Documentation",
     "section": "Design and Considerations",
     "text": "Design and Considerations"
   },
   {
-    "objectID": "posts/system-design/short-url.html#implementation-details",
-    "href": "posts/system-design/short-url.html#implementation-details",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#implementation-details",
+    "href": "posts/system-design/arch-install.html#implementation-details",
+    "title": "Arch Installation Documentation",
     "section": "Implementation Details",
     "text": "Implementation Details"
   },
   {
-    "objectID": "posts/system-design/short-url.html#challenges-and-solutions",
-    "href": "posts/system-design/short-url.html#challenges-and-solutions",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#challenges-and-solutions",
+    "href": "posts/system-design/arch-install.html#challenges-and-solutions",
+    "title": "Arch Installation Documentation",
     "section": "Challenges and Solutions",
     "text": "Challenges and Solutions"
   },
   {
-    "objectID": "posts/system-design/short-url.html#testing-and-validations",
-    "href": "posts/system-design/short-url.html#testing-and-validations",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#testing-and-validations",
+    "href": "posts/system-design/arch-install.html#testing-and-validations",
+    "title": "Arch Installation Documentation",
     "section": "Testing and Validations",
     "text": "Testing and Validations"
   },
   {
-    "objectID": "posts/system-design/short-url.html#security-considerations",
-    "href": "posts/system-design/short-url.html#security-considerations",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#security-considerations",
+    "href": "posts/system-design/arch-install.html#security-considerations",
+    "title": "Arch Installation Documentation",
     "section": "Security Considerations",
     "text": "Security Considerations"
   },
   {
-    "objectID": "posts/system-design/short-url.html#conclusion",
-    "href": "posts/system-design/short-url.html#conclusion",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#conclusion",
+    "href": "posts/system-design/arch-install.html#conclusion",
+    "title": "Arch Installation Documentation",
     "section": "Conclusion",
     "text": "Conclusion"
   },
   {
-    "objectID": "posts/system-design/short-url.html#understanding-the-problem-and-establishing-design-scope",
-    "href": "posts/system-design/short-url.html#understanding-the-problem-and-establishing-design-scope",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#understanding-the-problem-and-establishing-design-scope",
+    "href": "posts/system-design/arch-install.html#understanding-the-problem-and-establishing-design-scope",
+    "title": "Arch Installation Documentation",
     "section": "Understanding the Problem and Establishing Design Scope",
     "text": "Understanding the Problem and Establishing Design Scope\nBefore diving into the design, let’s clarify the requirements of a URL Shortener service—what it does, why it’s needed, and who benefits from it. A URL shortener takes a long URL and converts it into a shorter, more manageable version. The primary goal is to create a compact web address that’s easier to share, remember, and track. This service typically shortens the URL by adding a random sequence of letters and numbers. For example, a URL shortener can transform a lengthy URL like:\nhttps://www.amazon.in/gp/product/B0CHX1W1XY/ref=s9_bw_cg_Budget_2f1_w\ninto a much shorter one like:\nhttps://tinyurl.com/ypbd82wy\n\nScope and Assumptions\nNow that we have a clear understanding of what a URL Shortener is, let’s delve deeper into the specifics and outline the requirements. To do this, we’ll address the following questions:\n\nWhat are the key functional features required for this service?\nThe service should convert a long URL into a short one, and when the shortened URL is accessed, it should redirect the user to the original long URL.\n\n\nWhat is the expected duration of the service’s operation?\nFor the purpose of this design, we’ll assume the service will run for the next 10 years.\n\n\nHow many URLs will the system need to handle simultaneously?\nWe’ll assume the system may need to manage up to 1,000 URLs concurrently.\n\n\nWhat characters will be used in the shortened URLs?\nThe shortened URLs will use alphanumeric characters.\n\n\nHow long should the shortened URLs be?\nThe URLs should be kept as short as possible while maintaining uniqueness.\n\n\nWhat should happen if two or more users submit the same long URL?\nInitially, the same short URL can be returned for identical long URLs. In the future, we can incorporate analytics or additional metadata to create user-specific shortened URLs.\n\nNext, we calculate the system’s capacity to ensure it can handle the required load. Given the need to manage around 1,000 URLs concurrently over a period of 10 years, we can estimate the total number of URLs the service will need to handle. The calculation is as follows:\n⇒ 60 seconds x 60 minutes x 24 hours x 365 days x 10 years x 1,000 URLs = 315 billion URLs over 10 years\nThis means the system needs to generate at least 315 billion unique URLs over the course of 10 years using alphanumeric short URLs.\nTo determine how many characters are needed to support this capacity, we can calculate:\n⇒ Alphanumeric characters: a-z (26) + A-Z (26) + 0-9 (10) = 62 possible combinations\n⇒ Since 62^7 = 3.5 trillion, using 7 characters will provide more than enough combinations to handle the required number of URLs over the next 10 years.\nFor each URL, let’s estimate the space required:\n\nShortened URL: 7 bytes (1-2 bytes per character)\nLong URL: Assume around 100 bytes\nMetadata: 500 bytes (e.g., userId, isValid status)\n\nThis totals approximately 1,000 bytes per URL.\nGiven the need to store 315 billion URLs over 10 years:\n⇒ 1,000 bytes x 315 billion URLs = 315 TB of storage space required."
   },
   {
-    "objectID": "posts/system-design/short-url.html#high-level-design-proposal",
-    "href": "posts/system-design/short-url.html#high-level-design-proposal",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#high-level-design-proposal",
+    "href": "posts/system-design/arch-install.html#high-level-design-proposal",
+    "title": "Arch Installation Documentation",
     "section": "High-Level Design Proposal",
     "text": "High-Level Design Proposal\n\n\nClient (Frontend/User Interface)\nThe frontend is where users interact with the URL shortener. It’s the part of the application that makes shortening URLs easy and intuitive. The challenge here is to design a user interface (UI) that is both simple and powerful without unnecessary complexities.\n\nFrontend Design: Simplified for Usability\n\nBasic Form – The Core Interaction\nEvery URL shortener needs a form where users can input their long URLs. But simplicity is key. A clean, minimal form with just one field (for the long URL) and a button (to generate the short link) reduces cognitive load for users. Users don’t want to be bombarded with options—just a quick, easy solution to shorten their URLs.\nError Handling – Proactively Managing User Input\nPeople make mistakes—sometimes they’ll input a malformed or invalid URL. That’s where error handling comes into play. Implementing real-time URL validation ensures that only correct URLs are processed. By preventing invalid data from reaching the backend, we also avoid unnecessary server load and improve user experience. For example, a friendly message like “Please enter a valid URL” can guide users in correcting their input.\nOptional Tracking – Adding Value with Insights\nSome users may want more than just shortened URLs. Adding a feature for tracking how many times each short URL was clicked gives users insights into how their links are performing. This feature could be optional, visible only to users who need it. By offering advanced analytics, we provide added value to the core functionality.\n\nTech Stack Consideration: For the frontend, using modern frameworks like React or Vue.js allows for a fast, responsive interface. These frameworks also make it easier to scale and add new features as the project evolves. We can also utilise Tailwind.css or shadcn-ui to give a minimalistic look.\n\n\n\nFronted of the URL Shortener App (https://github.com/Riley-Raasch/url-shortner-service)\n\n\n\n\n\nServer (Backend/API)\nThe backend is where the heavy lifting happens. It processes the logic, manages the data, and ensures that requests are handled efficiently. The decisions made here directly impact the system’s scalability and performance.\n\nCore API Functions: The Building Blocks\n\nShorten URL – Creating Unique Short Links\nThe core functionality of the backend is to accept long URLs from the frontend, generate unique short URLs, and store this mapping in a database. There are different ways to generate short URLs. You could use hashing algorithms (e.g., MD5 or SHA-256) or a counter-based system that assigns a unique ID for each URL and encodes it (e.g., using Base62).\n\nWhy this works: Hashing ensures that similar URLs produce distinct results, while a counter-based system can be faster but may require additional collision checks. Both approaches scale well but differ in complexity and performance.\n\nRedirect URL – Efficient Lookup and Redirection\nWhen a user accesses a short URL, the backend retrieves the corresponding long URL from the database and redirects the user. This operation needs to be lightning-fast to avoid any latency in the user experience. By using indexed database queries and possibly caching frequently accessed short URLs, we can ensure efficient lookups and near-instantaneous redirection.\n\nWhy this works: Optimizing database lookups (e.g., through caching) and ensuring that the redirection process is swift prevents slowdowns and improves the overall user experience.\n\nAnalytics API (Optional) – Tracking Engagement\nIf you want to give users the ability to track how often their links are used, an analytics API can be added to collect data such as click counts, user demographics, or referral sources. Implementing this feature requires balancing between data collection and performance, ensuring that analytics don’t slow down the core functionality.\n\nWhy this works: Offering analytics as an optional feature allows users to gain valuable insights into their links’ performance, adding another dimension to the service.\n\n\nTech Stack Consideration: For the backend, using a highly scalable and fast server-side language like Node.js, Python, or Go is ideal. These languages have great frameworks (like Express.js for Node.js or Flask for Python) that handle API requests efficiently.\n\n\nBackend Logic : How It All Works Together\n\nURL Shortening Process\nWhen a user submits a long URL, the backend generates a unique short link. This could be achieved through hashing or by assigning a unique ID. The URL pair is then stored in the database. A system like MongoDB or MySQL can be used, depending on the size and complexity of the project. NoSQL databases like MongoDB are great for flexibility and scalability, especially if you expect to store billions of URLs.\nRedirection Process\nUpon accessing a short URL, the backend retrieves the original URL from the database and redirects the user. If a caching layer (like Redis) is used, popular URLs can be served even faster, reducing the load on the database and improving response times.\nAnalytics (Optional)\nIf analytics are enabled, the backend can track each visit to the short URL. Data such as the number of clicks, user details, and timestamps can be stored for further analysis. However, it’s essential to balance this tracking to avoid impacting performance.\n\n\n\nTech Stack\nTo ensure efficient processing and scalability, the following technologies can be used:\n\nLanguage: Common backend languages include Node.js, Python, or Go.\nFramework: The backend framework can be Express.js (Node.js), Flask (Python), or Gin (Go) to handle API requests efficiently.\nDatabase: Data can be stored in either a relational database like MySQL or a NoSQL database like MongoDB to support large-scale URL mappings.\n\nThis backend design ensures that the service is scalable, fast, and capable of handling high volumes of traffic with optional analytics support.\n\n\n\nLoad Balancer\nAs our URL shortener grows in popularity, it needs to handle increasing traffic without crashing. A load balancer distributes traffic across multiple servers, ensuring that no single server is overwhelmed.\n\nStrategy: Using a Round-Robin or Least Connections algorithm evenly spreads requests among servers. This helps in managing large amounts of traffic.\nTech Stack: Tools like Nginx or AWS Elastic Load Balancing can handle this distribution effectively.\n\nWhy ?: Load balancing improves availability and prevents bottlenecks by spreading out incoming requests across multiple servers.\n\n\nCaching Layer\nFrequent database lookups can slow down the service. A caching layer helps reduce database load by storing frequently accessed URL mappings in memory.\n\nStrategy: Cache popular URL mappings using policies like Least Recently Used (LRU) to ensure the cache remains efficient.\nTech Stack: Use Redis or Memcached for this purpose.\n\n\n\nDatabase (Storage)\nTo store billions of URL mappings, we need a robust, scalable database system. Here are key considerations:\n\nSchema Design\nThe database should store mappings of short URLs to long URLs, along with optional fields like user ID (to track users) and expiration dates (if you plan to offer temporary URLs).\n\nTable structure (or collection in NoSQL):\n\nshort_url: The shortened URL identifier.\nlong_url: The original URL.\nuser_id (optional): To track users.\nis_valid: To mark if the shortened URL is still active.\ncreated_at, expires_at: To manage URL expiration if necessary.\n\n\nScalability\nUse a database that can handle high volumes of reads and writes. MySQL is great for structured data, but MongoDB (NoSQL) is better suited for large-scale applications where flexibility is needed.\nSharding and Replication\nAs the database grows, sharding (splitting the database into smaller, faster chunks) and replication (duplicating data across multiple databases) ensure performance remains high.\n\nURL Generation Algorithm\n\nHash-Based Approach\nUse a hashing algorithm like MD5 or SHA-256 to generate a unique identifier for each URL. This approach ensures that each URL has a distinct short link.\nCounter-Based Approach\nAlternatively, you can use a global counter that increments for each new URL. The counter value is encoded (e.g., Base62) to generate a short URL. This method is fast but requires checking for collisions.\nCollision Handling\nIn both approaches, collision detection is essential. You need a strategy to ensure that no two URLs generate the same short link. In case of a collision, rehash the URL or increment the counter."
   },
   {
-    "objectID": "posts/system-design/short-url.html#challenges-and-trade-offs",
-    "href": "posts/system-design/short-url.html#challenges-and-trade-offs",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#challenges-and-trade-offs",
+    "href": "posts/system-design/arch-install.html#challenges-and-trade-offs",
+    "title": "Arch Installation Documentation",
     "section": "Challenges and Trade-offs",
     "text": "Challenges and Trade-offs"
   },
   {
-    "objectID": "posts/system-design/short-url.html#low-level-design-proposal",
-    "href": "posts/system-design/short-url.html#low-level-design-proposal",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#low-level-design-proposal",
+    "href": "posts/system-design/arch-install.html#low-level-design-proposal",
+    "title": "Arch Installation Documentation",
     "section": "Low-Level Design Proposal",
     "text": "Low-Level Design Proposal"
   },
   {
-    "objectID": "posts/system-design/short-url.html#whats-next",
-    "href": "posts/system-design/short-url.html#whats-next",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#whats-next",
+    "href": "posts/system-design/arch-install.html#whats-next",
+    "title": "Arch Installation Documentation",
     "section": "What’s Next ?",
     "text": "What’s Next ?"
   },
   {
-    "objectID": "posts/system-design/short-url.html#high-level-design-proposalchallenges-and-trade-offs",
-    "href": "posts/system-design/short-url.html#high-level-design-proposalchallenges-and-trade-offs",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#high-level-design-proposalchallenges-and-trade-offs",
+    "href": "posts/system-design/arch-install.html#high-level-design-proposalchallenges-and-trade-offs",
+    "title": "Arch Installation Documentation",
     "section": "High-Level Design ProposalChallenges and Trade-offs",
     "text": "High-Level Design ProposalChallenges and Trade-offs"
   },
   {
-    "objectID": "posts/system-design/short-url.html#scaling",
-    "href": "posts/system-design/short-url.html#scaling",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#scaling",
+    "href": "posts/system-design/arch-install.html#scaling",
+    "title": "Arch Installation Documentation",
     "section": "Scaling",
     "text": "Scaling"
   },
   {
-    "objectID": "posts/system-design/short-url.html#a.-introduction",
-    "href": "posts/system-design/short-url.html#a.-introduction",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#a.-introduction",
+    "href": "posts/system-design/arch-install.html#a.-introduction",
+    "title": "Arch Installation Documentation",
     "section": "",
-    "text": "Designing a URL shortener, like TinyURL, is a classic problem in system design that offers a great opportunity to explore key design concepts. It’s not just about shrinking URLs—there’s a lot more going on behind the scenes.\nIn this blog, I’m excited to share how I approached this problem. I’ll walk you through my thought process, the challenges I faced, and the design decisions I made to turn long URLs into short, manageable links."
+    "text": "The choices made in this guide are based on my personal preferences. This is a pacman themed install, since the Arch Linux package manager is pacman."
   },
   {
-    "objectID": "posts/system-design/short-url.html#b.-understanding-the-problem-and-establishing-design-scope",
-    "href": "posts/system-design/short-url.html#b.-understanding-the-problem-and-establishing-design-scope",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#b.-understanding-the-problem-and-establishing-design-scope",
+    "href": "posts/system-design/arch-install.html#b.-understanding-the-problem-and-establishing-design-scope",
+    "title": "Arch Installation Documentation",
     "section": "B. Understanding the Problem and Establishing Design Scope",
     "text": "B. Understanding the Problem and Establishing Design Scope\nBefore diving into the design, let’s clarify the requirements of a URL Shortener service—what it does, why it’s needed, and who benefits from it.\nA URL shortener takes a long URL and converts it into a shorter, more manageable version. The primary goal is to create a compact web address that’s easier to share, remember, and track. This service typically shortens the URL by adding a random sequence of letters and numbers. For example, a URL shortener can transform a lengthy URL like:\nhttps://www.amazon.in/gp/product/B0CHX1W1XY/ref=s9_bw_cg_Budget_2f1_w\ninto a much shorter one like:\nhttps://tinyurl.com/ypbd82wy\n\nB.1. Scope and Assumptions\nNow that we have a clear understanding of what a URL Shortener is, let’s delve deeper into the specifics and outline the requirements. To do this, we’ll address the following questions:\n\nB.1.1. What are the key functional features required for this service?\nThe service should convert a long URL into a short one, and when the shortened URL is accessed, it should redirect the user to the original long URL.\n\n\nB.1.2. What is the expected duration of the service’s operation?\nFor the purpose of this design, we’ll assume the service will run for the next 10 years.\n\n\nB.1.3. How many URLs will the system need to handle simultaneously?\nWe’ll assume the system may need to manage up to 1,000 URLs concurrently.\n\n\nB.1.4. What characters will be used in the shortened URLs?\nThe shortened URLs will use alphanumeric characters.\n\n\nB.1.5. How long should the shortened URLs be?\nThe URLs should be kept as short as possible while maintaining uniqueness.\n\n\nB.1.6. What should happen if two or more users submit the same long URL?\nInitially, the same short URL can be returned for identical long URLs. In the future, we can incorporate analytics or additional metadata to create user-specific shortened URLs.\n\nNext, we calculate the system’s capacity to ensure it can handle the required load. Given the need to manage around 1,000 URLs concurrently over a period of 10 years, we can estimate the total number of URLs the service will need to handle. The calculation is as follows:\n⇒ 60 seconds x 60 minutes x 24 hours x 365 days x 10 years x 1,000 URLs = 315 billion URLs over 10 years\nThis means the system needs to generate at least 315 billion unique URLs over the course of 10 years using alphanumeric short URLs.\nTo determine how many characters are needed to support this capacity, we can calculate:\n⇒ Alphanumeric characters: a-z (26) + A-Z (26) + 0-9 (10) = 62 possible combinations\n⇒ Since 62^7 = 3.5 trillion, using 7 characters will provide more than enough combinations to handle the required number of URLs over the next 10 years.\nFor each URL, let’s estimate the space required:\n\nShortened URL: 7 bytes (1-2 bytes per character)\nLong URL: Assume around 100 bytes\nMetadata: 500 bytes (e.g., userId, isValid status)\n\nThis totals approximately 1,000 bytes per URL.\nGiven the need to store 315 billion URLs over 10 years:\n⇒ 1,000 bytes x 315 billion URLs = 315 TB of storage space required."
   },
   {
-    "objectID": "posts/system-design/short-url.html#c.-deep-dive-into-designing",
-    "href": "posts/system-design/short-url.html#c.-deep-dive-into-designing",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#c.-deep-dive-into-designing",
+    "href": "posts/system-design/arch-install.html#c.-deep-dive-into-designing",
+    "title": "Arch Installation Documentation",
     "section": "C. Deep-Dive into designing",
     "text": "C. Deep-Dive into designing\n\n\n\n\n\n\nC.1. Client (Frontend/User Interface)\nThe frontend is where users interact with the URL shortener. It’s the part of the application that makes shortening URLs easy and intuitive. The challenge here is to design a user interface (UI) that is both simple and powerful without unnecessary complexities.\n\nC.1.1. Frontend Design: Simplified for Usability\n\nBasic Form – The Core Interaction\nEvery URL shortener needs a form where users can input their long URLs. But simplicity is key. A clean, minimal form with just one field (for the long URL) and a button (to generate the short link) reduces cognitive load for users. Users don’t want to be bombarded with options—just a quick, easy solution to shorten their URLs.\nOptional Tracking – Adding Value with Insights\nSome users may want more than just shortened URLs. Adding a feature for tracking how many times each short URL was clicked gives users insights into how their links are performing. This feature could be optional, visible only to users who need it. By offering advanced analytics, we provide added value to the core functionality.\n\nTech Stack Consideration: For the frontend, using modern frameworks like React or Vue.js allows for a fast, responsive interface. These frameworks also make it easier to scale and add new features as the project evolves. We can also utilise Tailwind.css or shadcn-ui to give a minimalistic look.\n\n\n\nFronted of the URL Shortener App (https://github.com/Riley-Raasch/url-shortner-service)\n\n\n\n\n\nC.2. Server (Backend/API)\nThe backend is where the heavy lifting happens. It processes the logic, manages the data, and ensures that requests are handled efficiently. The decisions made here directly impact the system’s scalability and performance.\n\nC.2.1. Core API Functions: The Building Blocks\n\nShorten URL – Creating Unique Short Links\nThe core functionality of the backend is to accept long URLs from the frontend, generate unique short URLs, and store this mapping in a database. There are different ways to generate short URLs. You could use hashing algorithms (e.g., MD5 or SHA-256) or a counter-based system that assigns a unique ID for each URL and encodes it (e.g., using Base62).\nHashing ensures that similar URLs produce distinct results, while a counter-based system can be faster but may require additional collision checks. Both approaches scale well but differ in complexity and performance.\nRedirect URL – Efficient Lookup and Redirection\nWhen a user accesses a short URL, the backend retrieves the corresponding long URL from the database and redirects the user. This operation needs to be lightning-fast to avoid any latency in the user experience. By using indexed database queries and possibly caching frequently accessed short URLs, we can ensure efficient lookups and near-instantaneous redirection.\nOptimizing database lookups (e.g., through caching) and ensuring that the redirection process is swift prevents slowdowns and improves the overall user experience.\nAnalytics API (Optional) – Tracking Engagement\nIf you want to give users the ability to track how often their links are used, an analytics API can be added to collect data such as click counts, user demographics, or referral sources. Implementing this feature requires balancing between data collection and performance, ensuring that analytics don’t slow down the core functionality.\nOffering analytics as an optional feature allows users to gain valuable insights into their links’ performance, adding another dimension to the service.\n\nTech Stack Consideration: For the backend, using a highly scalable and fast server-side language like Node.js, Python, or Go is ideal. These languages have great frameworks (like Express.js for Node.js or Flask for Python) that handle API requests efficiently.\nHere are the API endpoints that can be created to support these feature:\n\n\n\n\n\n\n\nC.2.2. Backend Logic : How It All Works Together\n\n\n\n\n\n\nURL Shortening Process\nWhen a user submits a long URL, the backend generates a unique short link. This could be achieved through hashing or by assigning a unique ID. The URL pair is then stored in the database. A system like MongoDB or MySQL can be used, depending on the size and complexity of the project. NoSQL databases like MongoDB are great for flexibility and scalability, especially if you expect to store billions of URLs.\n\n\n\n\n\n\n\nRedirection Process\nUpon accessing a short URL, the backend retrieves the original URL from the database and redirects the user. If a caching layer (like Redis) is used, popular URLs can be served even faster, reducing the load on the database and improving response times.\n\n\n\n\n\n\n\nAnalytics (Optional)\nIf analytics are enabled, the backend can track each visit to the short URL. Data such as the number of clicks, user details, and timestamps can be stored for further analysis. However, it’s essential to balance this tracking to avoid impacting performance.\n\n\n\nC.2.3. Tech Stack\nTo ensure efficient processing and scalability, the following technologies can be used:\n\nLanguage: Common backend languages include Node.js, Python, or Go.\nFramework: The backend framework can be Express.js (Node.js), Flask (Python), or Gin (Go) to handle API requests efficiently.\nDatabase: Data can be stored in either a relational database like MySQL or a NoSQL database like MongoDB to support large-scale URL mappings.\n\nThis backend design ensures that the service is scalable, fast, and capable of handling high volumes of traffic with optional analytics support.\n\n\n\nC.3. Load Balancer\nAs the popularity of our URL shortener grows, managing increased traffic becomes critical to avoid downtime and ensure seamless user experience. A load balancer is a key component that distributes incoming traffic across multiple servers, ensuring no single server bears too much load, which could lead to crashes or performance degradation.\nStrategy: To evenly distribute traffic, we can use algorithms like Round-Robin or Least Connections. Round-Robin cycles through servers in a balanced way, while Least Connections ensures that servers with fewer active requests receive more traffic, optimizing overall performance.\nTech Stack: Tools like Nginx or AWS Elastic Load Balancing are well-suited for handling traffic distribution across multiple servers efficiently.\nImplementing load balancing ensures higher availability and prevents bottlenecks by spreading out the traffic, making sure no single server is overwhelmed. This not only improves reliability but also optimizes resource utilization, especially as traffic scales.\n\n\nC.4. Caching Layer\nFrequent database lookups can slow down response times, especially as the user base grows. A caching layer helps mitigate this by storing frequently accessed URL mappings in memory, allowing the system to retrieve data much faster than querying the database each time.\nStrategy: The caching layer should prioritize storing the most popular URL mappings. By using policies like Least Recently Used (LRU), the cache remains efficient, keeping the most relevant data available in memory while discarding outdated information.\nTech Stack: Tools like Redis or Memcached are excellent choices for building a robust caching layer. Both provide high-speed, in-memory data storage that significantly reduces the load on the database and improves response times.\nCaching reduces the need for repeated database queries, enhancing the performance of frequently accessed URLs and providing a smoother user experience. By alleviating pressure on the database, the system scales more effectively without sacrificing speed.\n\n\nC.5. Database (Storage)\nTo support millions, or even billions, of URL mappings, a well-designed and scalable database is essential. The database must efficiently store, query, and update URL mappings, ensuring the system can handle high volumes of both reads and writes.\nSchema Design: The database schema should store short URL mappings alongside their original long URLs, user-related metadata, and expiration details (if applicable). Key fields include:\n\nshort_url: The unique identifier for the shortened URL.\nlong_url: The original URL.\nuser_id (optional): To track ownership if needed.\nis_valid: Indicates if the shortened URL is still active.\ncreated_at, expires_at: For tracking URL expiration or time-sensitive URLs.\n\nScalability: Choosing the right database is crucial for handling large-scale operations. MySQL works well for structured data and is suitable for smaller applications. However, MongoDB (NoSQL) is often a better choice for larger, more flexible applications that need to scale horizontally, especially when dealing with unstructured or rapidly growing data.\nSharding and Replication: As the system grows, sharding (dividing the database into smaller, more manageable parts) and replication (duplicating data across multiple servers) become essential for maintaining high performance and availability. These techniques distribute the load, ensuring the system remains responsive as it scales.\nBy designing a scalable and efficient database schema, you ensure the system can handle growth without experiencing performance bottlenecks. Proper sharding and replication strategies help maintain fast read and write operations, which is critical for any high-traffic application.\n\n\nC.6. URL Generation Algorithm\nGenerating unique and reliable short URLs is the core of any URL shortener. The right algorithm ensures that each URL gets a distinct short link without clashes.\n\nHash-Based Approach: One method is using a hashing algorithm like MD5 or SHA-256 to generate a unique short link for each URL. Hashing is useful because it consistently generates distinct outputs, even for similar inputs, making it ideal for creating unique URLs.\n\n\n\nCounter-Based Approach: Alternatively, a counter-based system can assign a unique ID to each new URL. The ID is then encoded (e.g., using Base62) to generate a short URL. While this method is faster, it requires careful tracking to avoid collisions and may involve a little more overhead in maintaining uniqueness.\n\n\n\nCollision Handling: Regardless of the approach, handling potential collisions (two URLs generating the same short link) is essential. If a collision is detected, a strategy like rehashing the URL or incrementing the counter can be used to generate a new, unique short link.\n\nBy selecting the right URL generation strategy and preparing for potential collisions, you ensure that the system consistently generates unique short links without errors. This step is crucial for maintaining data integrity and preventing conflicts within the system."
   },
   {
-    "objectID": "posts/system-design/short-url.html#d.-challenges-and-trade-offs",
-    "href": "posts/system-design/short-url.html#d.-challenges-and-trade-offs",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#d.-challenges-and-trade-offs",
+    "href": "posts/system-design/arch-install.html#d.-challenges-and-trade-offs",
+    "title": "Arch Installation Documentation",
     "section": "D. Challenges and Trade-offs",
     "text": "D. Challenges and Trade-offs\nBuilding a URL shortener involves several challenges and trade-offs that need to be carefully managed to ensure efficiency, scalability, and reliability:\n\n1. Scalability\nAs traffic grows, handling it effectively requires strategies like load balancing, caching, and database sharding. These ensure that the system can handle increased requests without performance bottlenecks or downtime.\n\n\n2. Database Choice\nChoosing between SQL and NoSQL is critical. SQL databases provide structure and consistency but may struggle under heavy loads. NoSQL databases, like MongoDB, scale better for high traffic but may compromise on data consistency, making the choice a balance between structure and scalability.\n\n\n3. Collision Handling\nIn hash or counter-based URL generation, the risk of collisions—where two URLs generate the same short link—must be addressed. The trade-off here is between speed and ensuring uniqueness, as more reliable methods may be slower.\n\n\n4. Caching\nCaching frequently accessed URLs helps improve response times, but improper cache management can lead to outdated or stale data. Implementing policies like Least Recently Used (LRU) helps strike a balance between performance and data freshness.\n\n\n5. Redirection Speed\nTo ensure users are quickly redirected, optimizing redirection speed through in-memory caching solutions like Redis is crucial. However, managing memory efficiently becomes a challenge as the system scales.\n\n\n6. Security\nPreventing malicious use of shortened URLs adds complexity. Implementing URL filtering and validation checks ensures security but may slow down the overall process.\n\n\n7. URL Expiration & Analytics\nHandling expiring URLs adds complexity to the database and requires scheduled cleanup. Additionally, tracking analytics like clicks and user data provides value but increases storage and processing demands, potentially affecting overall performance.\nEffectively balancing these factors allows the URL shortener to be scalable, fast, and secure, while still providing a smooth user experience."
   },
   {
-    "objectID": "posts/system-design/short-url.html#e.-conclusion",
-    "href": "posts/system-design/short-url.html#e.-conclusion",
-    "title": "Building a URL shortner",
+    "objectID": "posts/system-design/arch-install.html#e.-conclusion",
+    "href": "posts/system-design/arch-install.html#e.-conclusion",
+    "title": "Arch Installation Documentation",
     "section": "E. Conclusion",
     "text": "E. Conclusion\nIn conclusion, designing a URL shortener system involves much more than just converting long URLs into shorter ones. The process requires careful consideration of system scalability, efficient URL storage and retrieval, and the potential for additional features like analytics and custom URL generation. By tackling challenges like efficient database querying, implementing caching layers, and balancing server loads, a robust, scalable service can be created that meets user needs while maintaining performance.\nThis deep dive into the key design components—such as the frontend, backend, load balancing, and database architecture—provides valuable insights into the thought processes and technical decisions behind building a URL shortener. Whether it’s optimizing user experience, ensuring the system can handle billions of URLs, or planning for future growth, the design choices made here lay the groundwork for a reliable, scalable URL shortening service that’s ready to handle real-world demands.\nI hope this exploration has offered useful strategies and insights. Thank you !\n\nReferences and Resources\n\nhttps://en.wikipedia.org/wiki/TinyURL"
   }

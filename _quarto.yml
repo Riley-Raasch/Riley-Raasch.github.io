@@ -8,8 +8,7 @@ website:
     cute_gecko: images/cute_gecko.png
     # cute_gecko-href: https://Riley-Raasch.github.io/
     right:
-      - icon: twitter
-        href: https://twitter.com/Pratikpkb
+
       - icon: linkedin
         href: https://www.linkedin.com/in/riley-raasch-b79178220/
       - icon: github
