@@ -1,6 +1,6 @@
 ---
 title: "Riley Raasch"
-subtitle: "*'If you want something very badly, set it free. If it comes back to you, it's yours forever. If it doesn't, it was never yours to begin with.'* <br><br> - Indecent Proposal (1993)" 
+subtitle: "*'Woo! I'm boutta make a name for myself here!’'* <br><br> - - Gambit (Channing Tatum)" 
 about:
   image: "images/riley.png"
   image-width: 15em
