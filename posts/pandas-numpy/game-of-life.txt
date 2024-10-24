@@ -22,5 +22,5 @@ toc: true
 jupyter: python3
 comments: 
     utterances:
-        repo: pr2tik1/Riley-Raasch.github.io
+        repo: pr2tik1/pr2tik1.github.io
 ---

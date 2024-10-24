@@ -6,7 +6,7 @@ website:
   title: "devExplore"
   navbar:
     logo: images/logo.png
-    # logo-href: https://Riley-Raasch.github.io/
+    # logo-href: https://pr2tik1.github.io/
     right:
       - icon: twitter
         href: https://twitter.com/Pratikpkb

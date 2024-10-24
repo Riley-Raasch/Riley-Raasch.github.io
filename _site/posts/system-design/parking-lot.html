@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pratik Kumar">
-<meta name="dcterms.date" content="2024-09-10">
+<meta name="dcterms.date" content="2024-09-11">
 
-<title>Building a URL shortner – devExplore</title>
+<title>Designing a Parking Lot System – devExplore</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,9 +89,9 @@ background: black;
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Building a URL shortner – devExplore">
+<meta name="twitter:title" content="Designing a Parking Lot System – devExplore">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="../post-images/4.jpg">
+<meta name="twitter:image" content="../post-images/5.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -156,10 +156,11 @@ background: black;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Arch Installation Documentation</h1>
+      <h1 class="title">Designing a Parking Lot System</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">System Administration</div>
-                <div class="quarto-category">Documentation</div>
+                <div class="quarto-category">System Design</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">OOps</div>
               </div>
                   </div>
   </div>
@@ -170,14 +171,14 @@ background: black;
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Riley Raasch </p>
+               <p>Pratik Kumar </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 24, 2024</p>
+        <p class="date">September 11, 2024</p>
       </div>
     </div>
     
@@ -193,332 +194,50 @@ background: black;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#1.-install-iso" id="toc-1.-install-iso" class="nav-link active" data-scroll-target="#1.-install-iso">1. Install an ISO from Arch Linux</a></li>
-  <li><a href="#2.-vm" id="toc-2.-vm" class="nav-link" data-scroll-target="#2.-vm">2. Create a New Virtual Machine</a></li>
-  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
-  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
-  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
-  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
-  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
-  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
-  <li><a href="#9.-ssh-config" id="toc-9.-ssh-config" class="nav-link active" data-scroll-target="#9.-ssh-config">9. SSH Configuration</a></li>
-  <li><a href="#10.-sudo-setup" id="toc-10.-sudo-setup" class="nav-link" data-scroll-target="#10.-sudo-setup">10. Sudo Setup</a></li>
-  <li><a href="#3.-partition-disk" id="toc-3.-partition-disk" class="nav-link" data-scroll-target="#3.-partition-disk">3. Partition the Disk</a></li>
-  <li><a href="#4.-mount-disk" id="toc-4.-mount-disk" class="nav-link" data-scroll-target="#4.-mount-disk">4. Mount the Disk</a>
-  <li><a href="#5.-install-os" id="toc-5.-install-os" class="nav-link" data-scroll-target="#5.-install-os">5. Install the Operating System</a>
-  <li><a href="#6.-boot-loader" id="toc-6.-boot-loader" class="nav-link active" data-scroll-target="#6.-boot-loader">6. Configure System and Boot Loader</a></li>
-  <li><a href="#7.-network-config" id="toc-7.-network-config" class="nav-link" data-scroll-target="#7.-network-config">7. Network Configuration</a></li>
-  <li><a href="#8.-package-manager" id="toc-8.-package-manager" class="nav-link" data-scroll-target="#8.-package-manager">8. Package Manager Configuration</a></li>
-</ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#requirements-and-goals" id="toc-requirements-and-goals" class="nav-link" data-scroll-target="#requirements-and-goals">Requirements and Goals</a></li>
+  <li><a href="#design-and-considerations" id="toc-design-and-considerations" class="nav-link" data-scroll-target="#design-and-considerations">Design and Considerations</a></li>
+  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details</a></li>
+  <li><a href="#challenges-and-solutions" id="toc-challenges-and-solutions" class="nav-link" data-scroll-target="#challenges-and-solutions">Challenges and Solutions</a></li>
+  <li><a href="#testing-and-validations" id="toc-testing-and-validations" class="nav-link" data-scroll-target="#testing-and-validations">Testing and Validations</a></li>
+  <li><a href="#security-considerations" id="toc-security-considerations" class="nav-link" data-scroll-target="#security-considerations">Security Considerations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<!-- start readme -->
 
 
-<h1 id="arch-installation-documentation">Arch Installation Documentation</h1>
-<blockquote>
-<p>[!TIP]
-Use the bash command 'set font: <code>-d</code>' to double your font size if it is hard to see.</p>
-</blockquote>
-<hr>
-<h2 id="1-install-an-iso-from-arch-linux">1. Install an ISO from <a href="https://archlinux.org/download/">Arch Linux</a></h2>
-<ul>
-<li>I chose one from MIT: <a href="https://mirrors.mit.edu/archlinux/iso/2024.10.01/">MIT Arch Linux ISO (2024.10.01)</a></li>
-</ul>
-<hr>
-<h2 id="2-create-a-new-virtual-machine">2. Create a New Virtual Machine</h2>
-<ul>
-<li>Set disk size to <strong>20GB</strong> and <strong>2GB of RAM</strong>.</li>
-</ul>
-<hr>
-<h2 id="3-partition-the-disk">3. Partition the Disk</h2>
-<ol>
-<li>Open the disk partition tool<pre class="hljs"><code><div>root@archiso ~ # cfdisk /dev/sda
-</div></code></pre>
-</li>
-<li>Select the <code>gpt</code> option.</li>
-</ol>
-<p><img src="https://github.com/user-attachments/assets/650e58dd-82eb-4a67-8be8-ef0fa7f71d0a" alt="image"></p>
-<ol start="3">
-<li>Create a 1MB partition for BIOS boot:
-<ul>
-<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
-<li>Set partition size: <code>1M</code>.</li>
-<li>Select partition type: <strong>BIOS Boot</strong>.</li>
-</ul>
-</li>
-<li>Create a 4GB partition for Linux Swap:
-<ul>
-<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
-<li>Set partition size: <code>4G</code>.</li>
-<li>Select partition type: <strong>Linux Swap</strong>.</li>
-</ul>
-</li>
-<li>Create a 16GB partition for the root file system:
-<ul>
-<li>Use your down arrow keys to navigate down to free space, then select <strong>New</strong>.</li>
-<li>Set partition size: <code>16</code>.</li>
-</ul>
-</li>
-<li>Write changes and exit.</li>
-<li>Format partitions:
-<ul>
-<li>Format root partition (ext4):<pre class="hljs"><code><div>root@archiso ~ # mkfs.ext4 /dev/sda3
-</div></code></pre>
-</li>
-<li>Set up swap partition:<pre class="hljs"><code><div>root@archiso ~ # mkswap /dev/sda2
-root@archiso ~ # swapon -a
-</div></code></pre>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="4-mount-the-disk">4. Mount the Disk</h2>
-<ul>
-<li>Mount the root partition<pre class="hljs"><code><div>root@archiso ~ # mount /dev/sda3 /mnt
-</div></code></pre>
-</li>
-</ul>
-<hr>
-<h2 id="5-install-the-operating-system">5. Install the Operating System</h2>
-<ul>
-<li>Copy OS files to the mounted disk:<pre class="hljs"><code><div>root@archiso ~ # pacstrap /mnt base linux linux-firmware nano grub dhcpcd
-</div></code></pre>
-</li>
-</ul>
-<blockquote>
-<p>[!CAUTION]<br>
-Do not skip this step before you reboot.
-If you do not install dhcpcd before reboot you will not have network connectivity ever!</p>
-</blockquote>
-<hr>
-<h2 id="6-configure-system-and-boot-loader">6. Configure System and Boot Loader</h2>
-<ol>
-<li>Generate the fstab file:<pre class="hljs"><code><div>root@archiso ~ # genfstab /mnt &gt;&gt; /mnt/etc/fstab
-</div></code></pre>
-</li>
-<li>Chroot into the installed system:<pre class="hljs"><code><div>root@archiso ~ # arch-chroot /mnt
-</div></code></pre>
-</li>
-<li>Set the root password:<pre class="hljs"><code><div>[root@archiso /] # passwd
-</div></code></pre>
-</li>
-<li>Install GRUB bootloader:<pre class="hljs"><code><div>[root@archiso /] # grub-install /dev/sda
-</div></code></pre>
-</li>
-<li>Generate GRUB configuration file:<pre class="hljs"><code><div>[root@archiso /] # grub-mkconfig -o /boot/grub/grub.cfg
-</div></code></pre>
-</li>
-<li>Exit chroot environment and reboot:<pre class="hljs"><code><div>[root@archiso /] # exit
-root@archiso ~ # reboot
-</div></code></pre>
-</li>
-<li>Log in as root.</li>
-</ol>
-<hr>
-<h2 id="7-network-configuration">7. Network Configuration</h2>
-<ul>
-<li>Start and enable the DHCP service for network management:<pre class="hljs"><code><div>[root@archiso /] # systemctl start dhcpcd
-[root@archiso /] # systemctl enable dhcpcd
-</div></code></pre>
-</li>
-</ul>
-<hr>
-<h2 id="8-package-manager-configuration">8. Package Manager Configuration</h2>
-<ol>
-<li>Edit the Pacman configuration:<pre class="hljs"><code><div>[root@archiso /] # nano /etc/pacman.conf
-</div></code></pre>
-<ul>
-<li>Scroll down and uncomment the following lines to enable multilib:<pre class="hljs"><code><div>#[multilib]
-#Include = /etc/pacman.d/mirrorlist
-</div></code></pre>
-<pre class="hljs"><code><div>[multilib]
-Include = /etc/pacman.d/mirrorlist
-</div></code></pre>
-</li>
-</ul>
-</li>
-<li>Update package lists:<pre class="hljs"><code><div>[root@archiso /] # pacman -Syy
-</div></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="9-ssh-configuration">9. SSH Configuration</h2>
-<ol>
-<li>Install OpenSSH:<pre class="hljs"><code><div>[root@archiso /] # pacman -S openssh
-</div></code></pre>
-</li>
-<li>Start and enable the SSH service:<pre class="hljs"><code><div>[root@archiso /] # systemctl start sshd
-[root@archiso /] # systemctl enable sshd
-</div></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="10-sudo-setup">10. Sudo Setup</h2>
-<ol>
-<li>Install <code>sudo</code>:<pre class="hljs"><code><div>[root@archiso /] # pacman -S sudo
-</div></code></pre>
-</li>
-<li>Edit the sudoers file:<pre class="hljs"><code><div>[root@archiso /] # EDITOR=nano visudo
-</div></code></pre>
-<ul>
-<li>Uncomment this line so that users in group wheel have sudo permissions:<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
-#%wheel ALL=(ALL) ALL
-</div></code></pre>
-<pre class="hljs"><code><div>##Uncomment to allow members of group wheel to execute any command
-%wheel ALL=(ALL) ALL
-</div></code></pre>
-</li>
-</ul>
-</li>
-<li>Add yourself as a sudo user:<pre class="hljs"><code><div>[root@archiso /] # sudo useradd -m riley
-[root@archiso /] # sudo usermod -aG wheel riley
-</div></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="12-networkmanager-setup">12. NetworkManager Setup</h2>
-<ol>
-<li>Install NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # sudo pacman -S networkmanager
-</div></code></pre>
-</li>
-<li>Start and enable NetworkManager:<pre class="hljs"><code><div>[root@archiso /] # systemctl start NetworkManager
-[root@archiso /] # systemctl enable NetworkManager
-</div></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="13-kde-plasma-desktop-installation">13. KDE Plasma Desktop Installation</h2>
-<ol>
-<li>Log in to your user account.</li>
-<li>Install KDE Plasma and SDDM display manager:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S plasma sddm
-</div></code></pre>
-</li>
-<li>Install additional software:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo pacman -S konsole kate firefox zsh git
-</div></code></pre>
-</li>
-<li>Set ZSH as the default shell:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ chsh -s $(which zsh)
-</div></code></pre>
-</li>
-<li>Enable SDDM for graphical login:<pre class="hljs"><code><div>[riley@ArchLinux ~]$ sudo systemctl enable sddm
-[riley@ArchLinux ~]$ sudo systemctl enable --now sddm
-</div></code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="14-zsh-setup">14. ZSH Setup</h2>
-<ol>
-<li>Login as yourself, Open Konsole (you may get an error, since we haven't configured ZSH yet)</li>
-<li>Install Oh My Zsh:<pre class="hljs"><code><div>sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span>
-</div></code></pre>
-</li>
-<li>Edit the Zsh configuration file:<pre class="hljs"><code><div>nano ~/.zshrc
-</div></code></pre>
-<ul>
-<li>Set the theme to <code>bira</code>:<pre class="hljs"><code><div>ZSH_THEME=&quot;bira&quot;
-</div></code></pre>
-Exit and save.</li>
-<li>Restart ZSH:<pre class="hljs"><code><div>source ~/.zshrc
-</div></code></pre>
-</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>[!TIP]
-Restarting ZSH 'source ~/.zshrc' is your best friend when you are messing with the terminal colors.</p>
-</blockquote>
-<hr>
-<h2 id="15-add-other-users">15. Add other users</h2>
-<ol>
-<li>
-<pre class="hljs"><code><div>sudo useradd -m -s /bin/zsh justin
-</div></code></pre>
-</li>
-<li>Set the password for the user:<pre class="hljs"><code><div><span class="hljs-built_in">echo</span> <span class="hljs-string">"justin:GraceHopper1906"</span> | sudo chpasswd
-</div></code></pre>
-</li>
-<li>Force the user to change the password on the next login:<pre class="hljs"><code><div>sudo chage -d 0 justin
-</div></code></pre>
-</li>
-<li>Set sudo permissions:<pre class="hljs"><code><div> sudo usermod -aG wheel justin
-</div></code></pre>
-</li>
-<li>Repeat for Codi</li>
-</ol>
-<hr>
-<h2 id="16-aliases-used">16. Aliases Used</h2>
-<ul>
-<li>Define helpful command aliases in <code>.zshrc</code> with the command:<pre class="hljs"><code><div>sudo nano ~/.zshrc
-</div></code></pre>
-</li>
-<li>Set your aliases<pre class="hljs"><code><div><span class="hljs-built_in">alias</span> c=<span class="hljs-string">'clear'</span>
-<span class="hljs-built_in">alias</span> get=<span class="hljs-string">'sudo pacman -S'</span>
-<span class="hljs-built_in">alias</span> <span class="hljs-built_in">cd</span>..=<span class="hljs-string">'cd ..'</span>
-<span class="hljs-built_in">alias</span> update=<span class="hljs-string">'sudo pacman -Syu'</span>
-</div></code></pre>
-</li>
-</ul>
-<hr>
-<h2 id="17-customization">17. Customization</h2>
-<ol>
-<li>Hostname<pre class="hljs"><code><div>sudo nano /etc/hostname
-</div></code></pre>
-Type your preferred name (I chose Pacman), then exit and save.</li>
-<li>Wallpaper
-<ul>
-<li>Go to System Settings, then Quick Settings, Wallpaper, + Add, navigate to your image, Open, Apply</li>
-</ul>
-</li>
-<li>Theme
-<ul>
-<li>Go to System Settings, then Quick Settings, click Breeze (dark mode), Apply</li>
-</ul>
-</li>
-<li>Lock Screen
-<ul>
-<li>Go to System Settings, then Colors &amp; Themes, Login Screen (SDDM), select Breeze, Click the picture icon, Load From File..., navigate to your image, Open, Apply Plasma Settings (top toolbar), Apply (bottom right), restart</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>[!CAUTION]<br>
-CLICK BOTH Apply Plasma Settings (top toolbar) and Apply (bottom right).
-KDE Plasma has a bug where if you reboot and do not press Apply Plasma Settings (top toolbar), you will load into a black screen and will not be able to recover your GUI.</p>
-</blockquote>
-<ol start="5">
-<li>Timezone
-<ul>
-<li>Date &amp; Time, set date and time automatically, Time Zone (top Right), search for your region (CHicago in my case), click it, Apply</li>
-<li>Click on the time (Bottom Right of your Desktop), Click Digital Clock Settings (Top right of time window), click the drop down to select 12-Hour time, Apply</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="18-other-packages-i-like">18. Other Packages I like</h2>
-<ol>
-<li>tree</li>
-<li>neofetch</li>
-<li>cowsay</li>
-</ol>
-<hr>
-<h2 id="sources">Sources</h2>
-<ol>
-<li><a href="https://www.youtube.com/watch?v=l8YPS2itHfU">Straightforward Configuration</a></li>
-<li><a href="https://www.youtube.com/watch?v=68z11VAYMS8&amp;t">KDE Plasma Guidance</a></li>
-<li><a href="https://wiki.archlinux.org/title/Installation_guide">Arch Wiki</a></li>
-</ol>
 
-</body>
-
-<!-- end readme -->
-
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Designing a Parking Lot System is another classic problem in system design that challenges you to think about real-world scenarios, manage resources efficiently, and handle various edge cases. It’s a great way to dive into the complexities of object-oriented design and understand how to build a system that can scale and adapt to changing requirements.</p>
 </section>
+<section id="requirements-and-goals" class="level2">
+<h2 class="anchored" data-anchor-id="requirements-and-goals">Requirements and Goals</h2>
+</section>
+<section id="design-and-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-considerations">Design and Considerations</h2>
+</section>
+<section id="implementation-details" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details</h2>
+</section>
+<section id="challenges-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-solutions">Challenges and Solutions</h2>
+</section>
+<section id="testing-and-validations" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-validations">Testing and Validations</h2>
+</section>
+<section id="security-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="security-considerations">Security Considerations</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -942,7 +661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="pr2tik1/Riley-Raasch.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="pr2tik1/pr2tik1.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
