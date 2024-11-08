@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Pratik Kumar">
+<meta name="dcterms.date" content="2024-09-10">
 
-<title>  Riley Raasch – GeckoSec</title>
+<title>Install PiHole via Docker – GeckoSec</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
 <link href="./images/cute_gecko.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner h1,
@@ -112,45 +83,16 @@ ul.task-list li input[type="checkbox"] {
 
       .quarto-title-block .quarto-title-banner {
         color: white;
-background-image: url(images/Sazerac_Header.png);
-background-size: cover;
+background: black;
       }
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Riley Raasch – GeckoSec">
-<meta name="twitter:description" content="Cats may have nine lives, but your data only has one. Protect it! 😺 ">
-<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Arch Installation Documentation – GeckoSec">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="../post-images/4.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -160,10 +102,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-cute_gecko">
+    <a href="../../index.html" class="navbar-brand navbar-brand-cute_gecko">
     <img src="./images/cute_gecko.png" alt="" class="navbar-cute_gecko">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">GeckoSec</span>
     </a>
   </div>
@@ -174,11 +116,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
 </ul>
@@ -187,12 +129,12 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/riley-raasch-b79178220/"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/pratik-kumar04/"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/Riley-Raasch"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/pr2tik1"> <i class="bi bi-github" role="img">
 </i> 
 
 <span class="menu-text"></span></a>
@@ -206,158 +148,181 @@ window.Quarto = {
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <!-- <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title"><br> GeckoSec <br></h1>
-            <p class="subtitle lead"><b><span class="black-text">Cats may have nine lives, but your data only has one. Protect it! 😺</span></b>
-            </p> <br> <br> <br> <br> <br> <br></p>
-                      </div>
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Install PiHole via Docker</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">System Administration</div>
+                <div class="quarto-category">Documentation</div>
+              </div>
+                  </div>
   </div>
-     -->
+    
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Riley Raasch </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 11, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Documentation">Documentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="System Administration">System Administration <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</a></li>
+      <li><a href="#install-pihole-via-a-docker-container">Install PiHole via a Docker Container</a></li>
+  </ul>
+</nav>
     </div>
-</div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<div class="list quarto-listing-default">
+<!-- start readme -->
 
-  <!-- first listing start -->
-<div class="quarto-post image-left" data-index="0" data-categories="System Administration,Documentation" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-<div class="thumbnail">
-<p><a href="./posts/install-guide/arch-install.html" class="no-external"></a></p><a href="./posts/install-guide/arch-install.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/arch-linux.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/install-guide/arch-install.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/install-guide/arch-install.html" class="no-external">Arch Installation Documentation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/install-guide/arch-install.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('System Administration'); return false;">
-System Administration
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
-Documentation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/install-guide/arch-install.html" class="no-external">The choices made in this guide are based on my personal preferences. This is a pacman themed install, since the Arch Linux package manager is pacman.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/install-guide/arch-install.html" class="no-external">
-<div class="listing-date">
-October 24, 2024
-</div>
-<div class="listing-author">
-Riley Raasch
-</div>
-<div class="listing-reading-time">
-14 min
-</div>
-</a>
-</div>
-</div>
+<h1 id="summary">Summary:</h1>
+<p>This documentation goes through installing Docker Engine and setting up a PiHole container on Ubuntu 24.04.1 LTS (Noble Numbat).</p>
+<p>Warning: Do not run the result of this assignment with an IP besides localhost if your system isn't properly secured.
+This documentation will set up PiHole with localhost.
+iptables works best with Docker containers.</p>
+<h1 id="tips">Tips:</h1>
+<ol>
+<li>To enable copy-and-paste functionality between your host system and an Ubuntu VM in VMWare</li>
+</ol>
+<p>a. Install VMware Tools:</p>
+<pre class="hljs"><code><div>sudo apt update
+sudo apt install open-vm-tools open-vm-tools-desktop
+</div></code></pre>
+<p>b. Restart the VM</p>
+<h1 id="install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</h1>
+<p>These Instructions are based off of https://docs.docker.com/engine/install/ubuntu/</p>
+<ol>
+<li>Set up Docker's apt repository.</li>
+</ol>
+<pre class="hljs"><code><div># Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-<!-- end first post listing -->
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+</div></code></pre>
+<ol start="2">
+<li>Install the Docker packages.</li>
+</ol>
+<pre class="hljs"><code><div>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</div></code></pre>
+<ol start="3">
+<li>Verify that the Docker Engine installation is successful by running the hello-world image.</li>
+</ol>
+<pre class="hljs"><code><div> sudo docker run hello-world
+</div></code></pre>
+<ol start="4">
+<li>Add yourself to Docker Group (Optional but recommended)</li>
+</ol>
+<pre class="hljs"><code><div>sudo usermod -aG docker username
+</div></code></pre>
+<ol start="5">
+<li>Check that Docker Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker run hello-world
+</div></code></pre>
+<ol start="6">
+<li>Check that Compose Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker compose version
+</div></code></pre>
+<h1 id="install-pihole-via-a-docker-container">Install PiHole via a Docker Container</h1>
+<p>These Instructions are based off of https://github.com/pi-hole/docker-pi-hole</p>
+<ol>
+<li>Create a directory for PiHole:</li>
+</ol>
+<pre class="hljs"><code><div>mkdir ~/pihole &amp;&amp; cd ~/pihole
+</div></code></pre>
+<ol start="2">
+<li>Create a docker-compose.yml file:</li>
+</ol>
+<pre class="hljs"><code><div>nano docker-compose.yml
+</div></code></pre>
+<p>Paste these contents into the compose file.</p>
+<pre class="hljs"><code><div># More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: &quot;host&quot;
+    ports:
+      - &quot;53:53/tcp&quot;
+      - &quot;53:53/udp&quot;
+      - &quot;67:67/udp&quot; # Only required if you are using Pi-hole as your DHCP server
+      - &quot;80:80/tcp&quot;
+    environment:
+      TZ: 'America/Chicago'
+      # WEBPASSWORD: 'set a secure password here or it will be random'
+    # Volumes store your data between container upgrades
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    cap_add:
+      - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+    restart: unless-stopped
+</div></code></pre>
+<ol start="3">
+<li>Log in to Docker</li>
+</ol>
+<pre class="hljs"><code><div>docker login
+</div></code></pre>
+<ol start="4">
+<li>Build and Start PiHole</li>
+</ol>
+<pre class="hljs"><code><div>docker compose up -d
+</div></code></pre>
+<ol start="5">
+<li>Use the Pi-hole web UI
+a. Visit http://localhost:80/admin/ on your browser
+b. Reset your password</li>
+</ol>
+<pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
+</div></code></pre>
+<p><img src="post-images/pihole-webapp.png" alt="alt text"></p>
+<ol start="6">
+<li>Shut Down the container
+docker compose down</li>
+</ol>
 
-<!-- second listing -->
+<!-- end readme -->
 
-<div class="quarto-post image-left" data-index="1" data-categories="System Administration,Documentation" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-  <div class="thumbnail">
-  <p><a href="./posts/install-guide/docker.html" class="no-external"></a></p><a href="./posts/install-guide/docker.html" class="no-external">
-  <p><img loading="lazy" src="./posts/post-images/pihole-webbapp.png" class="thumbnail-image"></p>
-  </a><p><a href="./posts/install-guide/docker.html" class="no-external"></a></p>
-  </div>
-  <div class="body">
-  <h3 class="no-anchor listing-title">
-  <a href="./posts/install-guide/docker.html" class="no-external">Arch Installation Documentation</a>
-  </h3>
-  <div class="listing-subtitle">
-  <a href="./posts/install-guide/docker.html" class="no-external"></a>
-  </div>
-  <div class="listing-categories">
-  <div class="listing-category" onclick="window.quartoListingCategory('System Administration'); return false;">
-  System Administration
-  </div>
-  <div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
-  Documentation
-  </div>
-  </div>
-  <div class="listing-description">
-  <a href="./posts/install-guide/docker.html" class="no-external">This documentation goes through installing Docker Engine and setting up a PiHole container on Ubuntu 24.04.1 LTS (Noble Numbat).</a>
-  </div>
-  </div>
-  <div class="metadata">
-  <a href="./posts/install-guide/docker.html" class="no-external">
-  <div class="listing-date">
-  November 8, 2024
-  </div>
-  <div class="listing-author">
-  Riley Raasch
-  </div>
-  <div class="listing-reading-time">
-  7 min
-  </div>
-  </a>
-  </div>
-  </div>
+</section>
+</section>
 
-<!-- end second listing -->
-
-
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -778,6 +743,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="pr2tik1/Riley-Raasch.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -787,10 +754,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../../about.html">
 <p>About</p>
 </a>
   </li>  
+
 </ul>
     </div>
     <div class="nav-footer-right">

@@ -2,7 +2,8 @@
 
 This documentation goes through installing Docker Engine and setting up a PiHole container on Ubuntu 24.04.1 LTS (Noble Numbat).
 
-[!WARNING] Do not run the result of this assignment with an IP besides localhost if your system isn't properly secured.
+Warning: Do not run the result of this assignment with an IP besides localhost if your system isn't properly secured.
+This documentation will set up PiHole with localhost.
 iptables works best with Docker containers. 
 
 # Tips:
