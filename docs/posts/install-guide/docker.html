@@ -206,14 +206,15 @@ background: black;
 This documentation will set up PiHole with localhost.
 iptables works best with Docker containers.</p>
 <h1 id="tips">Tips</h1>
-<ol>
+
 <p>Enable copy-and-paste functionality between your host system and an Ubuntu VM in VMWare</p>
+<ul>
 <li>Install VMware Tools</li>
 <pre class="hljs"><code><div>sudo apt update
 sudo apt install open-vm-tools open-vm-tools-desktop
 </div></code></pre>
 <li>Restart the VM</li>
-</ol>
+</ul>
 <h1 id="install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</h1>
 <p>These Instructions are based off of <a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/ </a></p>
 <ul>
@@ -311,9 +312,9 @@ services:
 <li>Visit http://localhost:80/admin/ on your browser</li>
 <li>Reset your password</li>
 
-<li><pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
-</div></code></pre></li>
-<p><img src="./pihole-webbapp.png" alt="alt text"></p>
+<pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
+</div></code></pre>
+<p><img src="./pihole-webbapp.png" alt="alt text" width="342" height="180"></p>
 
 <li>Shut Down the container</li>
 <pre class="hljs"><code><div>docker compose down</div></code></pre>
