@@ -260,7 +260,7 @@ sudo apt-get update
 </ul>
 
 <h1 id="install-pihole-via-a-docker-container">Install PiHole via a Docker Container</h1>
-<p>These Instructions are based off of <a href="https://github.com/pi-hole/docker-pi-hole" width="342" height="180">https://github.com/pi-hole/docker-pi-hole</a></p>
+<p>These Instructions are based off of <a href="https://github.com/pi-hole/docker-pi-hole">https://github.com/pi-hole/docker-pi-hole</a></p>
 <ul>
 <li>Create a directory for PiHole:</li>
 
@@ -307,21 +307,18 @@ services:
 </div></code></pre>
 
 <li>Use the Pi-hole web UI</li>
-<ul>
+
 <li>Visit http://localhost:80/admin/ on your browser</li>
 <li>Reset your password</li>
 
-</ul>
-
 <li><pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
 </div></code></pre></li>
-</ul>
-</ol>
 <p><img src="./pihole-webbapp.png" alt="alt text"></p>
-<ol start="6">
-<li>Shut Down the container
-docker compose down</li>
-</ol>
+
+<li>Shut Down the container</li>
+<pre class="hljs"><code><div>docker compose down</div></code></pre>
+</ul>
+
 
 <!-- end readme -->
 
