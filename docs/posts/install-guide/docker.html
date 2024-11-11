@@ -207,15 +207,15 @@ This documentation will set up PiHole with localhost.
 iptables works best with Docker containers.</p>
 <h1 id="tips">Tips:</h1>
 <ol>
-<li>To enable copy-and-paste functionality between your host system and an Ubuntu VM in VMWare</li>
+<p>Enable copy-and-paste functionality between your host system and an Ubuntu VM in VMWare</p>
 </ol>
-<p>a. Install VMware Tools:</p>
+<li>Install VMware Tools:</li>
 <pre class="hljs"><code><div>sudo apt update
 sudo apt install open-vm-tools open-vm-tools-desktop
 </div></code></pre>
-<p>b. Restart the VM</p>
+<li>Restart the VM</li>
 <h1 id="install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</h1>
-<p>These Instructions are based off of https://docs.docker.com/engine/install/ubuntu/</p>
+<p>These Instructions are based off of <a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/ </a></p>
 <ol>
 <li>Set up Docker's apt repository.</li>
 </ol>
@@ -259,7 +259,7 @@ sudo apt-get update
 <pre class="hljs"><code><div>sudo docker compose version
 </div></code></pre>
 <h1 id="install-pihole-via-a-docker-container">Install PiHole via a Docker Container</h1>
-<p>These Instructions are based off of https://github.com/pi-hole/docker-pi-hole</p>
+<p>These Instructions are based off of <a href="https://github.com/pi-hole/docker-pi-hole" width="342" height="180">https://github.com/pi-hole/docker-pi-hole</a></p>
 <ol>
 <li>Create a directory for PiHole:</li>
 </ol>
@@ -305,12 +305,15 @@ services:
 <pre class="hljs"><code><div>docker compose up -d
 </div></code></pre>
 <ol start="5">
-<li>Use the Pi-hole web UI
-a. Visit http://localhost:80/admin/ on your browser
-b. Reset your password</li>
+<li>Use the Pi-hole web UI</li>
+<ul>
+<li>Visit http://localhost:80/admin/ on your browser</li>
+<li>Reset your password</li>
+
+<li><pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
+</div></code></pre></li>
+</ul>
 </ol>
-<pre class="hljs"><code><div>docker exec -it pihole pihole -a -p
-</div></code></pre>
 <p><img src="./pihole-webbapp.png" alt="alt text"></p>
 <ol start="6">
 <li>Shut Down the container
