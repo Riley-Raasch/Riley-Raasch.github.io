@@ -344,20 +344,20 @@ docker compose up -d
 Since we changed the port to 80 instead of 51820, click on the vpn you just made, then click edit in the top right corner, then change the endpoint to the &quot;your_ip:80&quot;<br />
 <br />
 To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
-<p><img src="phone.png" alt="demonstration of the vpn working on iPhone"></p>
+<p><img src="phone.png" alt="demonstration of the vpn working on iPhone" width="684" height="360"></p>
 <h1 id="connect-your-laptop-to-wireguard">Connect your laptop to WireGuard</h1>
 <p>Utilize WinSCP to copy over 'peer_desktop.conf'<br />
 <br />
 Firstly, Set up your connection like so:<br /></p>
 <p><img src="winscp.png" alt="WinSCP Setup"></p>
 <p>Then drag and drop 'peer_desktop.conf' from your droplet server to wherever you want to on your desktop.</p>
-<p><img src="WinSCP_look.png" alt="WinSCP file navigation"></p>
+<p><img src="WinSCP_look.png" alt="WinSCP file navigation" width="684" height="360"></p>
 <p>Next, download WireGuard for Windows: https://www.wireguard.com/install/<br />
 <br />
 Then, set up your VPN by clicking 'Add Tunnel' at the bottom left, navigating to 'peer_desktop.conf', then click 'Open'. If you forgot to change your Endpoint port, you can edit it in WireGuard by clicking 'Edit' at the bottom right and changing 'Endpoint = your_ip.195:51820' to 'Endpoint = your_ip.195:80'<br />
 <br />
 To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
-<p><img src="desktop.png" alt="demonstration of the vpn working on desktop"></p>
+<p><img src="desktop.png" alt="demonstration of the vpn working on desktop" width="684" height="360"></p>
 
 </body>
 </html>
