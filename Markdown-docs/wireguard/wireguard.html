@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wireguard.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="summary">Summary</h1>
+<p>This guide will walk you through setting up a Wireguard VPN server on a Digital Ocean Droplet with a Windows laptop and an iPhone.</p>
+<h1 id="digitalocean-setup">DigitalOcean Setup</h1>
+<ol>
+<li>Sign Up for a DigitalOcean Account</li>
+</ol>
+<ul>
+<li>New accounts on Digital Ocean are given $200 in credit for 60 days.</li>
+</ul>
+<ol start="2">
+<li>Create a Droplet</li>
+</ol>
+<ul>
+<li>Select the green &quot;Create&quot; button in the top right, then select &quot;Droplets&quot; from the dropdown menu</li>
+</ul>
+<ol start="3">
+<li>Choose an Image</li>
+</ol>
+<ul>
+<li>OS: Ubuntu</li>
+<li>Version: 24.04 (LTS) x64</li>
+</ul>
+<ol start="4">
+<li>Choose Size</li>
+</ol>
+<ul>
+<li>Droplet Type: Basic</li>
+<li>CPU options: Regular (SSD), $6/mo (the second option)</li>
+</ul>
+<ol start="5">
+<li>Choose Authentication Method</li>
+</ol>
+<ul>
+<li>I chose &quot;Password&quot; and generated and stored a password using Bitwarden</li>
+</ul>
+<ol start="6">
+<li>Finalize Details</li>
+</ol>
+<ul>
+<li>I customized the Hostname to be WireGuard so that it would look more appealing when working in the console</li>
+<li>Click &quot;Create Droplet&quot; in the bottom right</li>
+</ul>
+<h1 id="install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</h1>
+<p>These Instructions are based off of https://docs.docker.com/engine/install/ubuntu/</p>
+<ol>
+<li>Set up Docker's apt repository.</li>
+</ol>
+<pre class="hljs"><code><div># Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+</div></code></pre>
+<ol start="2">
+<li>Install the Docker packages.</li>
+</ol>
+<pre class="hljs"><code><div>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</div></code></pre>
+<ol start="3">
+<li>Verify that the Docker Engine installation is successful by running the hello-world image.</li>
+</ol>
+<pre class="hljs"><code><div> sudo docker run hello-world
+</div></code></pre>
+<ol start="4">
+<li>Add yourself to Docker Group (Optional but recommended)</li>
+</ol>
+<pre class="hljs"><code><div>sudo usermod -aG docker username
+</div></code></pre>
+<ol start="5">
+<li>Check that Docker Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker run hello-world
+</div></code></pre>
+<ol start="6">
+<li>Check that Compose Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker compose version
+</div></code></pre>
+<h1 id="setup-wireguard-vpn-server-with-docker">Setup WireGuard VPN Server with Docker</h1>
+<p>These Instructions are based off of https://thematrix.dev/setup-wireguard-vpn-server-with-docker/</p>
+<ol>
+<li>Setup WireGuard</li>
+</ol>
+<pre class="hljs"><code><div>Run these on your server:
+
+mkdir -p ~/wireguard/
+mkdir -p ~/wireguard/config/
+nano ~/wireguard/docker-compose.yml
+</div></code></pre>
+<p>Copy and paste the content below:</p>
+<pre class="hljs"><code><div>#version: '3.8'
+services:
+  wireguard:
+    container_name: wireguard
+    image: linuxserver/wireguard
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago # Change this to your timezone
+      - SERVERURL=1.2.3.4 # Change this to your server's IP address, note: this is located on your dashboard under ipv4
+      - SERVERPORT=51820
+      - PEERS=desktop,phone # Change these to the names you want to give your peers
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.0.0.0
+    ports:
+      - 80:51820/udp # This was changed from 51820:51820/udp to avoid common blocks on residential internet connections.
+    volumes:
+      - ./config:/config 
+      - /lib/modules:/lib/modules
+    restart: always
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+</div></code></pre>
+<ol start="2">
+<li>Start WireGuard</li>
+</ol>
+<pre class="hljs"><code><div>cd ~/wireguard/
+docker compose up -d
+</div></code></pre>
+<ol start="3">
+<li>View The Logs</li>
+</ol>
+<pre class="hljs"><code><div>docker compose logs -f wireguard
+</div></code></pre>
+<p>You will see the execution log, and QR codes of WireGuard VPN connection settings.<br />
+<br /></p>
+<h1 id="connect-your-phone-to-wireguard">Connect your Phone to WireGuard</h1>
+<p>Open WireGuard VPN application on your phone, click +, Create from QR code<br />
+<br />
+Since we changed the port to 80 instead of 51820, click on the vpn you just made, then click edit in the top right corner, then change the endpoint to the &quot;your_ip:80&quot;<br />
+<br />
+To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
+<p><img src="phone.png" alt="demonstration of the vpn working on iPhone"></p>
+<h1 id="connect-your-laptop-to-wireguard">Connect your laptop to WireGuard</h1>
+<p>Utilize WinSCP to copy over 'peer_desktop.conf'<br />
+<br />
+Firstly, Set up your connection like so:<br /></p>
+<p><img src="winscp.png" alt="WinSCP Setup"></p>
+<p>Then drag and drop 'peer_desktop.conf' from your droplet server to wherever you want to on your desktop.</p>
+<p><img src="WinSCP_look.png" alt="WinSCP file navigation"></p>
+<p>Next, download WireGuard for Windows: https://www.wireguard.com/install/<br />
+<br />
+Then, set up your VPN by clicking 'Add Tunnel' at the bottom left, navigating to 'peer_desktop.conf', then click 'Open'. If you forgot to change your Endpoint port, you can edit it in WireGuard by clicking 'Edit' at the bottom right and changing 'Endpoint = your_ip.195:51820' to 'Endpoint = your_ip.195:80'<br />
+<br />
+To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
+<p><img src="desktop.png" alt="demonstration of the vpn working on desktop"></p>
+
+</body>
+</html>

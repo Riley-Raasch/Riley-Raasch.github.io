@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Riley Raasch">
+<meta name="dcterms.date" content="2024-09-10">
 
-<title>  Riley Raasch – GeckoSec</title>
+<title>Cloud Wireguard VPN using Docker – GeckoSec</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
 <link href="./images/cute_gecko.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner h1,
@@ -112,45 +83,16 @@ ul.task-list li input[type="checkbox"] {
 
       .quarto-title-block .quarto-title-banner {
         color: white;
-background-image: url(images/Sazerac_Header.png);
-background-size: cover;
+background: black;
       }
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Riley Raasch – GeckoSec">
-<meta name="twitter:description" content="Cats may have nine lives, but your data only has one. Protect it! 😺 ">
-<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Arch Installation Documentation – GeckoSec">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="../post-images/4.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -160,10 +102,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-cute_gecko">
+    <a href="../../index.html" class="navbar-brand navbar-brand-cute_gecko">
     <img src="./images/cute_gecko.png" alt="" class="navbar-cute_gecko">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">GeckoSec</span>
     </a>
   </div>
@@ -174,11 +116,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
 </ul>
@@ -206,202 +148,227 @@ window.Quarto = {
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <!-- <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title"><br> GeckoSec <br></h1>
-            <p class="subtitle lead"><b><span class="black-text">Cats may have nine lives, but your data only has one. Protect it! 😺</span></b>
-            </p> <br> <br> <br> <br> <br> <br></p>
-                      </div>
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Cloud Wireguard VPN using Docker</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">System Administration</div>
+                <div class="quarto-category">Documentation</div>
+              </div>
+                  </div>
   </div>
-     -->
+    
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Riley Raasch </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 22, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Documentation">Documentation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="System Administration">System Administration <span class="quarto-category-count">(3)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#digitalocean-setup">DigitalOcean Setup</a></li>
+      <li><a href="#install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</a></li>
+      <li><a href="#setup-wireguard-vpn-server-with-docker">Setup WireGuard VPN Server with Docker</a></li>
+      <li><a href="#connect-your-phone-to-wireguard">Connect your Phone to WireGuard</a></li>
+      <li><a href="#connect-your-laptop-to-wireguard">Connect your laptop to WireGuard</a></li>
+    </ul>
+</nav>
     </div>
-</div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<div class="list quarto-listing-default">
+<!-- start readme -->
+<h1 id="summary">Summary</h1>
+<p>This guide will walk you through setting up a Wireguard VPN server on a Digital Ocean Droplet with a Windows laptop and an iPhone.</p>
+<h1 id="digitalocean-setup">DigitalOcean Setup</h1>
+<ol>
+<li>Sign Up for a DigitalOcean Account</li>
+</ol>
+<ul>
+<li>New accounts on Digital Ocean are given $200 in credit for 60 days.</li>
+</ul>
+<ol start="2">
+<li>Create a Droplet</li>
+</ol>
+<ul>
+<li>Select the green &quot;Create&quot; button in the top right, then select &quot;Droplets&quot; from the dropdown menu</li>
+</ul>
+<ol start="3">
+<li>Choose an Image</li>
+</ol>
+<ul>
+<li>OS: Ubuntu</li>
+<li>Version: 24.04 (LTS) x64</li>
+</ul>
+<ol start="4">
+<li>Choose Size</li>
+</ol>
+<ul>
+<li>Droplet Type: Basic</li>
+<li>CPU options: Regular (SSD), $6/mo (the second option)</li>
+</ul>
+<ol start="5">
+<li>Choose Authentication Method</li>
+</ol>
+<ul>
+<li>I chose &quot;Password&quot; and generated and stored a password using Bitwarden</li>
+</ul>
+<ol start="6">
+<li>Finalize Details</li>
+</ol>
+<ul>
+<li>I customized the Hostname to be WireGuard so that it would look more appealing when working in the console</li>
+<li>Click &quot;Create Droplet&quot; in the bottom right</li>
+</ul>
+<h1 id="install-docker-engine-using-the-apt-repository">Install Docker Engine using the apt repository</h1>
+<p>These Instructions are based off of https://docs.docker.com/engine/install/ubuntu/</p>
+<ol>
+<li>Set up Docker's apt repository.</li>
+</ol>
+<pre class="hljs"><code><div># Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-  <!-- first listing start -->
-<div class="quarto-post image-left" data-index="0" data-categories="System Administration,Documentation" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-<div class="thumbnail">
-<p><a href="./posts/install-guide/arch-install.html" class="no-external"></a></p><a href="./posts/install-guide/arch-install.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-images/arch-linux.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/install-guide/arch-install.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/install-guide/arch-install.html" class="no-external">Arch Installation Documentation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/install-guide/arch-install.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('System Administration'); return false;">
-System Administration
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
-Documentation
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/install-guide/arch-install.html" class="no-external">The choices made in this guide are based on my personal preferences. This is a pacman themed install, since the Arch Linux package manager is pacman.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/install-guide/arch-install.html" class="no-external">
-<div class="listing-date">
-October 24, 2024
-</div>
-<div class="listing-author">
-Riley Raasch
-</div>
-<div class="listing-reading-time">
-14 min
-</div>
-</a>
-</div>
-</div>
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+</div></code></pre>
+<ol start="2">
+<li>Install the Docker packages.</li>
+</ol>
+<pre class="hljs"><code><div>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</div></code></pre>
+<ol start="3">
+<li>Verify that the Docker Engine installation is successful by running the hello-world image.</li>
+</ol>
+<pre class="hljs"><code><div> sudo docker run hello-world
+</div></code></pre>
+<ol start="4">
+<li>Add yourself to Docker Group (Optional but recommended)</li>
+</ol>
+<pre class="hljs"><code><div>sudo usermod -aG docker username
+</div></code></pre>
+<ol start="5">
+<li>Check that Docker Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker run hello-world
+</div></code></pre>
+<ol start="6">
+<li>Check that Compose Installed Correctly</li>
+</ol>
+<pre class="hljs"><code><div>sudo docker compose version
+</div></code></pre>
+<h1 id="setup-wireguard-vpn-server-with-docker">Setup WireGuard VPN Server with Docker</h1>
+<p>These Instructions are based off of https://thematrix.dev/setup-wireguard-vpn-server-with-docker/</p>
+<ol>
+<li>Setup WireGuard</li>
+</ol>
+<pre class="hljs"><code><div>Run these on your server:
 
-<!-- end first post listing -->
+mkdir -p ~/wireguard/
+mkdir -p ~/wireguard/config/
+nano ~/wireguard/docker-compose.yml
+</div></code></pre>
+<p>Copy and paste the content below:</p>
+<pre class="hljs"><code><div>#version: '3.8'
+services:
+  wireguard:
+    container_name: wireguard
+    image: linuxserver/wireguard
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago # Change this to your timezone
+      - SERVERURL=1.2.3.4 # Change this to your server's IP address, note: this is located on your dashboard under ipv4
+      - SERVERPORT=51820
+      - PEERS=desktop,phone # Change these to the names you want to give your peers
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.0.0.0
+    ports:
+      - 80:51820/udp # This was changed from 51820:51820/udp to avoid common blocks on residential internet connections.
+    volumes:
+      - ./config:/config 
+      - /lib/modules:/lib/modules
+    restart: always
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+</div></code></pre>
+<ol start="2">
+<li>Start WireGuard</li>
+</ol>
+<pre class="hljs"><code><div>cd ~/wireguard/
+docker compose up -d
+</div></code></pre>
+<ol start="3">
+<li>View The Logs</li>
+</ol>
+<pre class="hljs"><code><div>docker compose logs -f wireguard
+</div></code></pre>
+<p>You will see the execution log, and QR codes of WireGuard VPN connection settings.<br />
+<br /></p>
+<h1 id="connect-your-phone-to-wireguard">Connect your Phone to WireGuard</h1>
+<p>Open WireGuard VPN application on your phone, click +, Create from QR code<br />
+<br />
+Since we changed the port to 80 instead of 51820, click on the vpn you just made, then click edit in the top right corner, then change the endpoint to the &quot;your_ip:80&quot;<br />
+<br />
+To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
+<p><img src="phone.png" alt="demonstration of the vpn working on iPhone"></p>
+<h1 id="connect-your-laptop-to-wireguard">Connect your laptop to WireGuard</h1>
+<p>Utilize WinSCP to copy over 'peer_desktop.conf'<br />
+<br />
+Firstly, Set up your connection like so:<br /></p>
+<p><img src="winscp.png" alt="WinSCP Setup"></p>
+<p>Then drag and drop 'peer_desktop.conf' from your droplet server to wherever you want to on your desktop.</p>
+<p><img src="WinSCP_look.png" alt="WinSCP file navigation"></p>
+<p>Next, download WireGuard for Windows: https://www.wireguard.com/install/<br />
+<br />
+Then, set up your VPN by clicking 'Add Tunnel' at the bottom left, navigating to 'peer_desktop.conf', then click 'Open'. If you forgot to change your Endpoint port, you can edit it in WireGuard by clicking 'Edit' at the bottom right and changing 'Endpoint = your_ip.195:51820' to 'Endpoint = your_ip.195:80'<br />
+<br />
+To test that it is working check your localIP info in your WireGuard settings and visit IPLeak.net and compare them.<br /></p>
+<p><img src="desktop.png" alt="demonstration of the vpn working on desktop"></p>
 
-<!-- second listing -->
-
-<div class="quarto-post image-left" data-index="1" data-categories="System Administration,Documentation" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-  <div class="thumbnail">
-  <p><a href="./posts/install-guide/docker.html" class="no-external"></a></p><a href="./posts/install-guide/docker.html" class="no-external">
-  <p><img loading="lazy" src="./posts/post-images/pihole-webbapp.png" class="thumbnail-image"></p>
-  </a><p><a href="./posts/install-guide/docker.html" class="no-external"></a></p>
-  </div>
-  <div class="body">
-  <h3 class="no-anchor listing-title">
-  <a href="./posts/install-guide/docker.html" class="no-external">Install PiHole via Docker</a>
-  </h3>
-  <div class="listing-subtitle">
-  <a href="./posts/install-guide/docker.html" class="no-external"></a>
-  </div>
-  <div class="listing-categories">
-  <div class="listing-category" onclick="window.quartoListingCategory('System Administration'); return false;">
-  System Administration
-  </div>
-  <div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
-  Documentation
-  </div>
-  </div>
-  <div class="listing-description">
-  <a href="./posts/install-guide/docker.html" class="no-external">This documentation goes through installing Docker Engine and setting up a PiHole container on Ubuntu 24.04.1 LTS (Noble Numbat).</a>
-  </div>
-  </div>
-  <div class="metadata">
-  <a href="./posts/install-guide/docker.html" class="no-external">
-  <div class="listing-date">
-  November 8, 2024
-  </div>
-  <div class="listing-author">
-  Riley Raasch
-  </div>
-  <div class="listing-reading-time">
-  7 min
-  </div>
-  </a>
-  </div>
-  </div>
-
-<!-- end second listing -->
-
-<!-- third listing -->
-
-<div class="quarto-post image-left" data-index="1" data-categories="System Administration,Documentation" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1726559689010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2654">
-  <div class="thumbnail">
-  <p><a href="./posts/wireguard/wireguard.html" class="no-external"></a></p><a href="./posts/wireguard/wireguard.html" class="no-external">
-  <p><img loading="lazy" src="./posts/post-images/wireguard-docker.jpg" class="thumbnail-image"></p>
-  </a><p><a href="./posts/wireguard/wireguard.html" class="no-external"></a></p>
-  </div>
-  <div class="body">
-  <h3 class="no-anchor listing-title">
-  <a href="./posts/wireguard/wireguard.html" class="no-external">Cloud Wireguard VPN using Docker</a>
-  </h3>
-  <div class="listing-subtitle">
-  <a href="./posts/wireguard/wireguard.html" class="no-external"></a>
-  </div>
-  <div class="listing-categories">
-  <div class="listing-category" onclick="window.quartoListingCategory('System Administration'); return false;">
-  System Administration
-  </div>
-  <div class="listing-category" onclick="window.quartoListingCategory('Documentation'); return false;">
-  Documentation
-  </div>
-  </div>
-  <div class="listing-description">
-  <a href="./posts/wireguard/wireguard.html" class="no-external">This guide will walk you through setting up a Wireguard VPN server on a Digital Ocean Droplet with a Windows laptop and an iPhone.</a>
-  </div>
-  </div>
-  <div class="metadata">
-  <a href="./posts/wireguard/wireguard.html" class="no-external">
-  <div class="listing-date">
-  November 22, 2024
-  </div>
-  <div class="listing-author">
-  Riley Raasch
-  </div>
-  <div class="listing-reading-time">
-  10 min
-  </div>
-  </a>
-  </div>
-  </div>
-
-<!-- end third listing -->
+</body>
+</html>
 
 
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<!-- end readme -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -822,6 +789,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="pr2tik1/Riley-Raasch.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -831,10 +800,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="../../about.html">
 <p>About</p>
 </a>
   </li>  
+
 </ul>
     </div>
     <div class="nav-footer-right">
